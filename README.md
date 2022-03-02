@@ -4,7 +4,7 @@
 | Name  | Contact Info |
 | ------------- | ------------- |
 | Kaiyin Chen  | kaiyin.chen@pace.edu |
-| Yuxiang Liu  | yuxiang.liu@pace.edu  |
+| Yuxiang Liu  | yl26417p@pace.edu  |
 | Haonan Jia  | haonan.jia@pace.edu |
 
 
