@@ -1,4 +1,4 @@
-**App name**
+**App name: PlayTrade**
 
 **Team** 
 | Name  | Contact Info |
@@ -18,14 +18,14 @@
 
 **[Product Backlog](https://docs.google.com/spreadsheets/d/1JBLR9C0NSWpUQZVGA3eq3OFHKyF6BT9AbrT0RwZVEXI/edit?usp=sharing)**
 
-**Architecture & Design**
+**[Architecture & Design](https://docs.google.com/document/d/1SmUjVTBYi3_AfcQe9f4SihTXG3y5WIZzmQ0hmI3f_r4/edit?usp=sharing)**
 
 **Content**
 
 **Sprint 1**
 
-** [Sprint planning](https://docs.google.com/spreadsheets/d/1JBLR9C0NSWpUQZVGA3eq3OFHKyF6BT9AbrT0RwZVEXI/edit?usp=sharing)**
-* Scrums 
+* [Sprint planning](https://docs.google.com/spreadsheets/d/1JBLR9C0NSWpUQZVGA3eq3OFHKyF6BT9AbrT0RwZVEXI/edit?usp=sharing)
+* [Scrums](https://docs.google.com/document/d/1rFTf0YwAqvt5mYA7jnBroZgVNMi2ro_nzM-VU48F_T4/edit?usp=sharing) 
 * Sprint demo - video and apk (or equivalent)
 * Spring retrospective
 
