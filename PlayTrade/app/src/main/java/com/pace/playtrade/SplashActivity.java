@@ -11,7 +11,7 @@ import android.view.animation.Animation;
 import android.widget.ImageView;
 
 public class SplashActivity extends AppCompatActivity {
-    private static int SPLASH_SCREEN_TIMEOUT = 3000;
+    private static int SPLASH_SCREEN_TIMEOUT = 1500;
     @Override
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
@@ -23,9 +23,7 @@ public class SplashActivity extends AppCompatActivity {
         fadeOut.setInterpolator(new AccelerateInterpolator());
         fadeOut.setStartOffset(500);
         fadeOut.setDuration(1800);
-        ImageView image = findViewById(R.id.imageView2);
-
-        image.setAnimation(fadeOut);
+        ImageView image = findViewById(R.id.welcome_page);
 
         new Handler().postDelayed(new Runnable() {
             @Override
@@ -35,6 +33,9 @@ public class SplashActivity extends AppCompatActivity {
                 finish();
             }
         }, SPLASH_SCREEN_TIMEOUT);
+
+        // image.setAnimation(fadeOut);
+
     }
 
 }
