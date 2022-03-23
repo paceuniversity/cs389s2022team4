@@ -49,9 +49,11 @@
 
 **Process description**
 
-**Communications**
+**Communications**<br>
+
 <a href="http://discords.com"><img width="80" hight="80" alt="Discord Logo" src="https://user-images.githubusercontent.com/79156500/159714628-a823b73a-53e3-4562-981f-2ceda494a0b1.png"></a>
 
-**Tools**
-<a href="https://developer.android.com/studio/?gclid=CjwKCAjwiuuRBhBvEiwAFXKaNFRBC7ZjIlrH8syQ1Qc_jEvarHNX4Z1O7AQOQChbFqVLgCdzdGX_gBoCE_oQAvD_BwE&gclsrc=aw.ds"><img width="80" hight="80" alt="Android Studio App Logo" src="https://user-images.githubusercontent.com/79156500/159712493-a67ec624-3585-4bdb-8944-d97b3c155c96.jpeg"></a><a href="https://github.com"><img width="80" hight="80" alt="GitHub Logo" src="https://user-images.githubusercontent.com/79156500/159713807-06fd77bf-9e89-44f5-b4f2-7a05e18e6910.png"></a><a href="https://drive.google.com"><img width="80" hight="80" alt="Google Drive Logo" src="https://user-images.githubusercontent.com/79156500/159714202-044b55cd-3341-4963-bb48-39d91cb31be0.png"></a><a href="canva.com"><img width="80" hight="80" alt="Canva Logo" src="https://user-images.githubusercontent.com/79156500/159715143-bacca580-925e-4140-baac-8e47ecb251cd.png"></a><a href="https://app.diagrams.net"><img width="80" hight="80" alt="draw.io logo" src="https://user-images.githubusercontent.com/79156500/159715378-960091bc-56a3-40d9-ae8f-6b811fea9eae.png></a>
+**Tools**<br>
+
+<a href="https://developer.android.com/studio/?gclid=CjwKCAjwiuuRBhBvEiwAFXKaNFRBC7ZjIlrH8syQ1Qc_jEvarHNX4Z1O7AQOQChbFqVLgCdzdGX_gBoCE_oQAvD_BwE&gclsrc=aw.ds"><img width="80" hight="80" alt="Android Studio App Logo" src="https://user-images.githubusercontent.com/79156500/159712493-a67ec624-3585-4bdb-8944-d97b3c155c96.jpeg"></a><a href="https://github.com"><img width="80" hight="80" alt="GitHub Logo" src="https://user-images.githubusercontent.com/79156500/159713807-06fd77bf-9e89-44f5-b4f2-7a05e18e6910.png"></a><a href="https://drive.google.com"><img width="80" hight="80" alt="Google Drive Logo" src="https://user-images.githubusercontent.com/79156500/159714202-044b55cd-3341-4963-bb48-39d91cb31be0.png"></a><a href="canva.com"><img width="80" hight="80" alt="Canva Logo" src="https://user-images.githubusercontent.com/79156500/159715143-bacca580-925e-4140-baac-8e47ecb251cd.png"></a><a href="https://app.diagrams.net"><img width="80" hight="80" alt="draw.io logo" src="https://user-images.githubusercontent.com/79156500/159715378-960091bc-56a3-40d9-ae8f-6b811fea9eae.png"></a>
 
