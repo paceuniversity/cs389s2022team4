@@ -11,7 +11,7 @@ import android.view.animation.Animation;
 import android.widget.ImageView;
 
 public class SplashActivity extends AppCompatActivity {
-    private static int SPLASH_SCREEN_TIMEOUT = 1500;
+    private static int SPLASH_SCREEN_TIMEOUT = 2000;
     @Override
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
