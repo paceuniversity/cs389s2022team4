@@ -9,6 +9,7 @@
         android:id="@+id/welcome_page"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:background="#0094D5"
         android:scrollbarSize="4dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
