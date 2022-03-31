@@ -3,16 +3,30 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/Administrator/Desktop/Jetpack/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.1" />
+        <entry key="..\:/Users/Administrator/Desktop/Jetpack/app/src/main/res/drawable/but_radius.xml" value="0.1" />
+        <entry key="..\:/Users/Administrator/Desktop/Jetpack/app/src/main/res/drawable/ed_radius.xml" value="0.1" />
+        <entry key="..\:/Users/Administrator/Desktop/Jetpack/app/src/main/res/drawable/ic_baseline.xml" value="0.1" />
+        <entry key="..\:/Users/Administrator/Desktop/Jetpack/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1" />
+        <entry key="..\:/Users/Administrator/Desktop/Jetpack/app/src/main/res/drawable/ic_lock.xml" value="0.1" />
+        <entry key="..\:/Users/Administrator/Desktop/Jetpack/app/src/main/res/drawable/radius.xml" value="0.1" />
+        <entry key="..\:/Users/Administrator/Desktop/Jetpack/app/src/main/res/layout/activity_home.xml" value="0.19635416666666666" />
+        <entry key="..\:/Users/Administrator/Desktop/Jetpack/app/src/main/res/layout/activity_regisiter.xml" value="0.2916666666666667" />
+        <entry key="..\:/Users/Administrator/Desktop/Jetpack/app/src/main/res/layout/activity_register.xml" value="0.2916666666666667" />
+        <entry key="..\:/Users/Administrator/Desktop/Jetpack/app/src/main/res/layout/main_activity.xml" value="0.1" />
+        <entry key="..\:/Users/Administrator/Desktop/PlayTrade/app/src/main/res/layout/activity_home.xml" value="0.2916666666666667" />
+        <entry key="..\:/Users/Administrator/Desktop/PlayTrade/app/src/main/res/layout/activity_register.xml" value="0.2916666666666667" />
+        <entry key="..\:/Users/Administrator/Desktop/PlayTrade/app/src/main/res/layout/main_activity.xml" value="0.2916666666666667" />
+        <entry key="..\:/Users/Administrator/Desktop/PlayTrade/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.2955" />
+        <entry key="..\:/Users/Administrator/Desktop/PlayTrade/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.2955" />
         <entry key="app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.1" />
-        <entry key="app/src/main/res/drawable/ic_baseline_add_shopping_cart_24.xml" value="0.1265" />
-        <entry key="app/src/main/res/drawable/ic_launcher_background.xml" value="0.1" />
         <entry key="app/src/main/res/drawable/ic_launcher_foreground.xml" value="0.1" />
-        <entry key="app/src/main/res/drawable/ic_welcome_page.xml" value="0.113" />
-        <entry key="app/src/main/res/layout/activity_login.xml" value="0.19429347826086957" />
-        <entry key="app/src/main/res/layout/activity_main.xml" value="0.4071929931640625" />
-        <entry key="app/src/main/res/layout/splash_activity.xml" value="0.17889492753623187" />
-        <entry key="app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.1" />
-        <entry key="app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_home.xml" value="0.10555555555555556" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.10555555555555556" />
+        <entry key="app/src/main/res/layout/activity_register.xml" value="0.10185185185185185" />
+        <entry key="app/src/main/res/layout/activity_splash.xml" value="0.297554347826087" />
+        <entry key="app/src/main/res/layout/main_activity.xml" value="0.10555555555555556" />
+        <entry key="app/src/main/res/layout/splash_activity.xml" value="0.15520833333333334" />
       </map>
     </option>
   </component>
