@@ -61,7 +61,7 @@ public class LoginActivity extends AppCompatActivity {
                     );
                 }
                 if (name == null) {
-                    Toast.makeText(LoginActivity.this, "未注册", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(LoginActivity.this, "Can not found this account", Toast.LENGTH_SHORT).show();
                 } else if (et_name.getText().toString().length() != name.length()) {
                     Toast.makeText(LoginActivity.this, "The account password cannot be empty", Toast.LENGTH_SHORT).show();
                 } else if (et_pass.getText().toString().length()!=password.length()){
