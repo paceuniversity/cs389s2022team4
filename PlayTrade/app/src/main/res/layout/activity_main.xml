@@ -25,7 +25,8 @@
         android:contentDescription="@string/car"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/car" />
+        app:srcCompat="@drawable/car"
+        android:onClick="car_detailActivity"/>
 
     <TextView
         android:id="@+id/car_description"
@@ -37,7 +38,8 @@
         android:text="@string/car"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/car"
-        app:layout_constraintTop_toTopOf="@+id/car" />
+        app:layout_constraintTop_toTopOf="@+id/car"
+        android:onClick="car_detailActivity"/>
 
     <ImageView
         android:id="@+id/stack"
@@ -48,7 +50,8 @@
         android:contentDescription="@string/stack"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/car"
-        app:srcCompat="@drawable/stack" />
+        app:srcCompat="@drawable/stack"
+        android:onClick="stack_detailActivity"/>
 
     <TextView
         android:id="@+id/stack_description"
@@ -60,7 +63,8 @@
         android:text="@string/stack"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/stack"
-        app:layout_constraintTop_toTopOf="@+id/stack" />
+        app:layout_constraintTop_toTopOf="@+id/stack"
+        android:onClick="stack_detailActivity"/>
 
     <ImageView
         android:id="@+id/dinosaur"
