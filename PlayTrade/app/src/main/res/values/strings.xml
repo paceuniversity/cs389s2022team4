@@ -6,8 +6,10 @@
     <string name="tablet">Bravokids Toys for 3-6 Years Old Girls Boys, LCD Writing Tablet 10 Inch Doodle Board, Electronic Drawing Tablet Drawing Pads</string>
     <string name="fighter">LEGO Star Wars Poe Dameron\'s X-Wing Fighter 75273 Building Kit, Cool Construction Toy for Kids, New 2020</string>
     <string name="bear">IKASA Giant Teddy Bear Plush Toy Stuffed Animals (Brown, 47 inches)</string>
+
     <string name="about">About this item</string>
     <string name="car_about_detail"><b>Condition:</b>   Used \n<b>Quantity:</b>    1 available \n<b>Brand:</b>         Figrol</string>
     <string name="stack_image_detail">TODO</string>
     <string name="stack_about_detail"><b>Condition:</b>   Used \n<b>Quantity:</b>    1 available \n<b>Brand:</b>         Sassy</string>
+
 </resources>
