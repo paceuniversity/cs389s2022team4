@@ -24,7 +24,7 @@
             android:drawableLeft="@drawable/ic_baseline"
             android:layout_marginTop="50dp"
             android:textColorHint="#818181"
-            android:hint="account number"
+            android:hint="Email"
             />
         <EditText
             android:id="@+id/ed_pass"

@@ -12,6 +12,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.example.jetpack.util.UccOpenHelper;
 
 
 public class RegisterActivity extends AppCompatActivity {
@@ -47,7 +48,7 @@ public class RegisterActivity extends AppCompatActivity {
                 ContentValues values = new ContentValues();
                 values.put("name",ed_name.getText().toString());
                 values.put("password",ed_pass.getText().toString());
-                db.insert("Book", null, values);
+                db.insert("user", null, values);
 //                Toast.makeText(RegisterActivity.this, ""+values, Toast.LENGTH_SHORT).show();
                 if (!TextUtils.equals(ed_pass.getText().toString(),ed_password.getText().toString())){
                     Toast.makeText(RegisterActivity.this, "Password not Same", Toast.LENGTH_SHORT).show();
