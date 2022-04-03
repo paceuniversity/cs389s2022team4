@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.example.jetpack">
 
     <uses-permission android:name="android.permission.INTERNET" />
@@ -24,11 +25,38 @@
             </intent-filter>
         </activity>
 
+<!--
+        <activity
+            android:name=".HomeActivity"
+            android:exported="true" />
+        <activity
+            android:name=".activity_car_detail"
+            android:label="Car Detail Activity"
+            android:parentActivityName=".HomeActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.jetpack.HomeActivity" />
+        </activity>
+        <activity
+            android:name=".activity_stack_detail"
+            android:label = "Stack Detail Activity"
+            android:parentActivityName=".HomeActivity"
+            tools:ignore="Instantiatable">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=
+                    "com.example.jetpack.HomeActivity" />
+        </activity>
+-->
+
+
         <uses-library android:name="android.test.runner" />
 
         <activity android:name=".RegisterActivity" />
         <activity android:name=".LoginActivity" />
+
         <activity android:name=".MainActivity" />
+
 
     </application>
 
