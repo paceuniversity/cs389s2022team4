@@ -1,4 +1,4 @@
-**App Name: PlayTrade**
+<h2>App Name: PlayTrade</h2>
 
 <img width="200" hight="200" src="https://user-images.githubusercontent.com/79156500/159767679-72ef7423-14f7-4efb-a704-755de8fe8e45.png">
 
@@ -14,9 +14,10 @@
 
 <img width="500" alt="Team Picture" src="https://user-images.githubusercontent.com/79156500/156053825-e897e551-3161-4d8e-b26b-9250e4faa5fe.png">
 
-**App description**
+<h1>App description</h1>
 <p>PlayTrade is an online trading market for old toys. Our goal is to support children's growth and recycling the resources. Children always want to buy new toys, and when they buy new toys, they would throw away old ones. Instead of getting rid of it, we can reuse it and exchange toys with others. We want to reuse toys and reduce development costs. </p>
 
+<h2>Requirements</2>
 **[Idea Proposal](https://docs.google.com/document/d/1WbHjCbxEYX8UhKTFXufQu9PVBIJygWGv/edit?usp=sharing&ouid=116372999750714234000&rtpof=true&sd=true)**
 
 **[Product Backlog](https://docs.google.com/spreadsheets/d/1JBLR9C0NSWpUQZVGA3eq3OFHKyF6BT9AbrT0RwZVEXI/edit?usp=sharing)**
