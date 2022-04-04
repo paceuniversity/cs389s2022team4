@@ -1,8 +1,8 @@
-**App name: PlayTrade**
+**App Name: PlayTrade**
 
 <img width="200" hight="200" src="https://user-images.githubusercontent.com/79156500/159767679-72ef7423-14f7-4efb-a704-755de8fe8e45.png">
 
-**Team** 
+**Team Members** 
 | Name  | Contact Info |
 | ------------- | ------------- |
 | Kaiyin Chen  | kaiyin.chen@pace.edu |
@@ -13,23 +13,25 @@
 <img width="500" alt="Team Picture" src="https://user-images.githubusercontent.com/79156500/156053825-e897e551-3161-4d8e-b26b-9250e4faa5fe.png">
 
 **App description**
+PlayTrade is an online trading market for old toys. Our goal is to support children's growth and recycling of resources. Children always want to buy new toys, and when they buy new toys, they would throw away old ones. Instead of getting rid of it, we can reuse it and exchange toys with others. We want to reuse toys and reduce development costs. 
 
 **[Idea Proposal](https://docs.google.com/document/d/1WbHjCbxEYX8UhKTFXufQu9PVBIJygWGv/edit?usp=sharing&ouid=116372999750714234000&rtpof=true&sd=true)**
-
-**Calendar**
 
 **[Product Backlog](https://docs.google.com/spreadsheets/d/1JBLR9C0NSWpUQZVGA3eq3OFHKyF6BT9AbrT0RwZVEXI/edit?usp=sharing)**
 
 **[Architecture & Design](https://docs.google.com/document/d/1SmUjVTBYi3_AfcQe9f4SihTXG3y5WIZzmQ0hmI3f_r4/edit?usp=sharing)**
 
-**Content**
+
+<h2>Content</h2><hr>
 
 **Sprint 1**
 
 * [Sprint planning](https://docs.google.com/spreadsheets/d/1JBLR9C0NSWpUQZVGA3eq3OFHKyF6BT9AbrT0RwZVEXI/edit?usp=sharing)
 * [Scrums](https://docs.google.com/document/d/1rFTf0YwAqvt5mYA7jnBroZgVNMi2ro_nzM-VU48F_T4/edit?usp=sharing) 
-* Sprint demo - video and apk (or equivalent)
-* Spring retrospective
+* [Sprint Demo](https://docs.google.com/document/d/1n-phR9a5P2s4epH_bqf84KNTXZRF1UI02-TosxL0_No/edit?usp=sharing)
+* [Video Demo] (https://www.youtube.com/watch?v=7m4EJyu5nug)
+* [Spring Retrospective](https://docs.google.com/document/d/1e_b1RiNE3vsTq9ZmVDVeVPtsRx_4EYy2hz_GmK0UxCQ/edit?usp=sharing)
+* [APK] (https://drive.google.com/file/d/1OTd15KZBIHbyZZ24zDRWUnfAoYMjb9zY/view?usp=sharing) 
 
 **Sprint 2**
 
