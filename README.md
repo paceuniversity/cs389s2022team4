@@ -2,7 +2,9 @@
 
 <img width="200" hight="200" src="https://user-images.githubusercontent.com/79156500/159767679-72ef7423-14f7-4efb-a704-755de8fe8e45.png">
 
-**Team Members** 
+
+**Team 4** 
+
 | Name  | Contact Info |
 | ------------- | ------------- |
 | Kaiyin Chen  | kaiyin.chen@pace.edu |
@@ -26,7 +28,7 @@ PlayTrade is an online trading market for old toys. Our goal is to support child
 
 **Sprint 1**
 
-* [Sprint planning](https://docs.google.com/spreadsheets/d/1JBLR9C0NSWpUQZVGA3eq3OFHKyF6BT9AbrT0RwZVEXI/edit?usp=sharing)
+* [Sprint Planning](https://docs.google.com/spreadsheets/d/1JBLR9C0NSWpUQZVGA3eq3OFHKyF6BT9AbrT0RwZVEXI/edit?usp=sharing)
 * [Scrums](https://docs.google.com/document/d/1rFTf0YwAqvt5mYA7jnBroZgVNMi2ro_nzM-VU48F_T4/edit?usp=sharing) 
 * [Sprint Demo](https://docs.google.com/document/d/1n-phR9a5P2s4epH_bqf84KNTXZRF1UI02-TosxL0_No/edit?usp=sharing)
 * [Video Demo] (https://www.youtube.com/watch?v=7m4EJyu5nug)

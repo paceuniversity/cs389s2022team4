@@ -1,4 +1,94 @@
 <?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true"
+        android:orientation="vertical">
+        <!--标题栏-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/colorPrimary">
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorWhite"
+                android:layout_centerInParent="true"
+                android:textSize="16dp"
+                android:text="Home"/>
+            <TextView
+                android:id="@+id/save"
+                android:visibility="gone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorWhite"
+                android:layout_centerInParent="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="20dp"
+                android:textSize="16dp"
+                android:text="Save"/>
+        </RelativeLayout>
+        <LinearLayout
+            android:id="@+id/ll_main_content"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:orientation="horizontal" />
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="58dp"
+            android:background="@drawable/bg_border_top"
+            android:paddingTop="8dp"
+            android:orientation="horizontal">
+            <RadioButton
+                android:id="@+id/rb_main_home"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:button="@null"
+                android:textAlignment="center"
+                android:gravity="center_horizontal"
+                android:drawableTop="@drawable/selector_main_rb_home"
+                android:textColor="@drawable/selector_main_rb_text"
+                android:textSize="12dp"
+                android:background="@null"
+                android:text="Home"/>
+            <RadioButton
+                android:id="@+id/rb_main_upload"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:button="@null"
+                android:textAlignment="center"
+                android:gravity="center_horizontal"
+                android:drawableTop="@drawable/selector_main_rb_upload"
+                android:textColor="@drawable/selector_main_rb_text"
+                android:textSize="12dp"
+                android:background="@null"
+                android:text="Upload"/>
+            <RadioButton
+                android:id="@+id/rb_main_user"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:button="@null"
+                android:textAlignment="center"
+                android:gravity="center_horizontal"
+                android:drawableTop="@drawable/selector_main_rb_user"
+                android:textColor="@drawable/selector_main_rb_text"
+                android:textSize="12dp"
+                android:background="@null"
+                android:text="My"/>
+        </RadioGroup>
+    </LinearLayout>
+</LinearLayout>
+
+<!--
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -25,7 +115,8 @@
         android:contentDescription="@string/car"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/car" />
+        app:srcCompat="@drawable/car"
+        android:onClick="car_detailActivity"/>
 
     <TextView
         android:id="@+id/car_description"
@@ -37,7 +128,8 @@
         android:text="@string/car"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/car"
-        app:layout_constraintTop_toTopOf="@+id/car" />
+        app:layout_constraintTop_toTopOf="@+id/car"
+        android:onClick="car_detailActivity"/>
 
     <ImageView
         android:id="@+id/stack"
@@ -48,7 +140,8 @@
         android:contentDescription="@string/stack"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/car"
-        app:srcCompat="@drawable/stack" />
+        app:srcCompat="@drawable/stack"
+        android:onClick="stack_detailActivity"/>
 
     <TextView
         android:id="@+id/stack_description"
@@ -60,7 +153,8 @@
         android:text="@string/stack"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/stack"
-        app:layout_constraintTop_toTopOf="@+id/stack" />
+        app:layout_constraintTop_toTopOf="@+id/stack"
+        android:onClick="stack_detailActivity"/>
 
     <ImageView
         android:id="@+id/dinosaur"
@@ -158,3 +252,4 @@
 </androidx.constraintlayout.widget.ConstraintLayout>
     </TableLayout>
 </ScrollView>
+-->
