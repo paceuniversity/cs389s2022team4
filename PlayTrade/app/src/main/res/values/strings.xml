@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">PlayTrade</string>
+    <string name="car">Remote Control Car - Transform Robot RC Cars Contains All Batteries: One-Button Deformation and 360 Degree Rotating Drifting</string>
+    <string name="stack">Sassy Stacks of Circles Stacking Ring STEM Learning Toy</string>
+    <string name="dinosaur"><![CDATA[TEMI Dinosaur Toys for Kids 3-5 with Activity Play Mat & Trees, Educational Realistic Dinosaur Play Set to Create a Dino World Including T-Rex, Triceratops, Velociraptor]]></string>
+    <string name="tablet">Bravokids Toys for 3-6 Years Old Girls Boys, LCD Writing Tablet 10 Inch Doodle Board, Electronic Drawing Tablet Drawing Pads</string>
+    <string name="fighter">LEGO Star Wars Poe Dameron\'s X-Wing Fighter 75273 Building Kit, Cool Construction Toy for Kids, New 2020</string>
+    <string name="bear">IKASA Giant Teddy Bear Plush Toy Stuffed Animals (Brown, 47 inches)</string>
+
+    <string name="about">About this item</string>
+    <string name="car_about_detail"><b>Condition:</b>   Used \n<b>Quantity:</b>    1 available \n<b>Brand:</b>         Figrol</string>
+    <string name="stack_image_detail">TODO</string>
+    <string name="stack_about_detail"><b>Condition:</b>   Used \n<b>Quantity:</b>    1 available \n<b>Brand:</b>         Sassy</string>
+
+</resources>
