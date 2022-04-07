@@ -1,6 +1,7 @@
 package com.example.jetpack;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.view.KeyEvent;
@@ -163,5 +164,15 @@ public class MainActivity extends AppCompatActivity {
             finish();
         }
 
+    }
+    // item details method made by Yuxiang
+    public void car_detailActivity(View view) {
+        Intent intent = new Intent(this, activity_car_detail.class);
+        startActivity(intent);
+    }
+    //item details method made by Yuxiang
+    public void stack_detailActivity(View view) {
+        Intent intent = new Intent(this, activity_stack_detail.class);
+        startActivity(intent);
     }
 }

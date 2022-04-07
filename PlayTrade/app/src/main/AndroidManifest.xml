@@ -25,10 +25,14 @@
             </intent-filter>
         </activity>
 
-<!--
-        <activity
-            android:name=".HomeActivity"
-            android:exported="true" />
+        <uses-library android:name="android.test.runner" />
+
+        <activity android:name=".RegisterActivity" />
+        <activity android:name=".LoginActivity" />
+
+        <activity android:name=".MainActivity" />
+
+        <!-- This activity ↓ is detail views by Yuxiang-->
         <activity
             android:name=".activity_car_detail"
             android:label="Car Detail Activity"
@@ -36,7 +40,7 @@
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.jetpack.HomeActivity" />
-        </activity>
+            </activity>
         <activity
             android:name=".activity_stack_detail"
             android:label = "Stack Detail Activity"
@@ -47,16 +51,7 @@
                 android:value=
                     "com.example.jetpack.HomeActivity" />
         </activity>
--->
-
-
-        <uses-library android:name="android.test.runner" />
-
-        <activity android:name=".RegisterActivity" />
-        <activity android:name=".LoginActivity" />
-
-        <activity android:name=".MainActivity" />
-
+        <!-- This activity ↑ is detail views by Yuxiang-->
 
     </application>
 
