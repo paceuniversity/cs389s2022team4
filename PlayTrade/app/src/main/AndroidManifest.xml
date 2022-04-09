@@ -14,7 +14,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-
+        <activity
+            android:name=".Signin"
+            android:exported="false" />
+        <activity
+            android:name=".User"
+            android:exported="false" />
         <activity
             android:name=".SplashActivity"
             android:exported="true">
@@ -30,9 +35,11 @@
         <activity android:name=".RegisterActivity" />
         <activity android:name=".LoginActivity" />
 
+
         <activity android:name=".MainActivity" />
 
         <!-- This activity ↓ is detail views by Yuxiang-->
+
         <activity
             android:name=".activity_car_detail"
             android:label="Car Detail Activity"
@@ -43,14 +50,14 @@
             </activity>
         <activity
             android:name=".activity_stack_detail"
-            android:label = "Stack Detail Activity"
+            android:label="Stack Detail Activity"
             android:parentActivityName=".HomeActivity"
             tools:ignore="Instantiatable">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=
-                    "com.example.jetpack.HomeActivity" />
+                android:value="com.example.jetpack.HomeActivity" />
         </activity>
+
         <!-- This activity ↑ is detail views by Yuxiang-->
 
     </application>
