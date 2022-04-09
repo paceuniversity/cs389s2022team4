@@ -11,5 +11,7 @@
     <string name="car_about_detail"><b>Condition:</b>   Used \n<b>Quantity:</b>    1 available \n<b>Brand:</b>         Figrol</string>
     <string name="stack_image_detail">TODO</string>
     <string name="stack_about_detail"><b>Condition:</b>   Used \n<b>Quantity:</b>    1 available \n<b>Brand:</b>         Sassy</string>
+    <string name="search">TODO</string>
+    <string name="please_enter_a_keyword">Please enter a keyword</string>
 
 </resources>

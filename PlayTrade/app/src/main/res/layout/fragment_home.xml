@@ -21,32 +21,38 @@
             android:gravity="center_vertical"
             android:background="@drawable/btn_border_radius_fill_gray"
             android:orientation="horizontal">
+
             <EditText
                 android:id="@+id/et_query"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:layout_marginEnd="5dp"
                 android:layout_weight="1"
                 android:background="@null"
+                android:hint="@string/please_enter_a_keyword"
+                android:imeOptions="actionSearch"
+                android:maxLines="1"
                 android:paddingTop="10dp"
                 android:paddingBottom="10dp"
-                android:imeOptions="actionSearch"
-                android:singleLine="true"
-                android:layout_marginRight="5dp"
                 android:scrollHorizontally="true"
-                android:maxLines="1"
-                android:textSize="12dp"
-                android:hint="Please enter a keyword"/>
+                android:singleLine="true"
+                android:textColorHint="#546E7A"
+                android:textSize="12sp" />
             <TextView
                 android:layout_width="1px"
                 android:layout_height="wrap_content"
-                android:textSize="14dp"
+                android:textSize="14sp"
                 android:background="@color/colorGray"/>
+
             <ImageView
                 android:id="@+id/iv_search"
                 android:layout_width="50dp"
                 android:layout_height="20dp"
-                android:src="@drawable/ic_search_gray"/>
+                android:src="@drawable/ic_search_gray"
+                tools:ignore="ImageContrastCheck"
+                android:contentDescription="@string/search" />
         </LinearLayout>
+        <!-- The following ↓ are items scrolling views by Yuxiang-->
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -60,7 +66,8 @@
                 android:contentDescription="@string/car"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/car" />
+                app:srcCompat="@drawable/car"
+                android:onClick="car_detailActivity"/>
 
             <TextView
                 android:id="@+id/car_description"
@@ -72,7 +79,8 @@
                 android:text="@string/car"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/car"
-                app:layout_constraintTop_toTopOf="@+id/car" />
+                app:layout_constraintTop_toTopOf="@+id/car"
+                android:onClick="car_detailActivity"/>
 
             <ImageView
                 android:id="@+id/stack"
@@ -83,7 +91,8 @@
                 android:contentDescription="@string/stack"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/car"
-                app:srcCompat="@drawable/stack" />
+                app:srcCompat="@drawable/stack"
+                android:onClick="stack_detailActivity"/>
 
             <TextView
                 android:id="@+id/stack_description"
@@ -95,7 +104,8 @@
                 android:text="@string/stack"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/stack"
-                app:layout_constraintTop_toTopOf="@+id/stack" />
+                app:layout_constraintTop_toTopOf="@+id/stack"
+                android:onClick="stack_detailActivity"/>
 
             <ImageView
                 android:id="@+id/dinosaur"

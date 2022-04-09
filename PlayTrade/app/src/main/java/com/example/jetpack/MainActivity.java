@@ -1,6 +1,7 @@
 package com.example.jetpack;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.view.KeyEvent;
@@ -36,6 +37,7 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate( Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         myActivity = this;
         setContentView(R.layout.activity_main);
@@ -94,11 +96,10 @@ public class MainActivity extends AppCompatActivity {
         switchFragment(0);
         rbHome.setChecked(true);
     }
-    /**
-     * 方法 - 切换Fragment
-     *
-     * @param fragmentIndex 要显示Fragment的索引
-     */
+
+//     方法 - 切换Fragment
+//     @param fragmentIndex 要显示Fragment的索引
+
     private void switchFragment(int fragmentIndex) {
         //在Activity中显示Fragment
         //1、获取Fragment管理器 FragmentManager
@@ -137,13 +138,13 @@ public class MainActivity extends AppCompatActivity {
         //5、提交事务
         transaction.commit();
     }
-    /**
-     * 双击退出
-     *
-     * @param keyCode
-     * @param event
-     * @return
-     */
+
+//     * 双击退出
+//     *
+//     * @param keyCode
+//     * @param event
+//     * @return
+
     @Override
     public boolean onKeyDown(int keyCode, KeyEvent event) {
         if (keyCode == KeyEvent.KEYCODE_BACK) {
@@ -163,5 +164,15 @@ public class MainActivity extends AppCompatActivity {
             finish();
         }
 
+    }
+    // item details method made by Yuxiang
+    public void car_detailActivity(View view) {
+        Intent intent = new Intent(this, activity_car_detail.class);
+        startActivity(intent);
+    }
+    //item details method made by Yuxiang
+    public void stack_detailActivity(View view) {
+        Intent intent = new Intent(this, activity_stack_detail.class);
+        startActivity(intent);
     }
 }

@@ -35,6 +35,14 @@ import com.luck.picture.lib.entity.LocalMedia;
 import com.luck.picture.lib.listener.OnResultCallbackListener;
 import com.luck.picture.lib.tools.PictureFileUtils;
 
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.AuthResult;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+
+import com.example.jetpack.util.UccOpenHelper;
+import com.google.firebase.auth.FirebaseUser;
+
 import java.util.List;
 
 
@@ -59,6 +67,16 @@ public class UserFragment extends Fragment {
         mActivity = (Activity) context;
     }
 
+//    @Override
+//    public void onStart() {
+//        super.onStart();
+//        // Check if user is signed in (non-null) and update UI accordingly.
+//        FirebaseUser currentUser = mAuth.getCurrentUser();
+//        if(currentUser != null){
+//            reload();
+//        }
+//    }
+/**
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_user,container,false);
@@ -77,6 +95,8 @@ public class UserFragment extends Fragment {
     /**
      * 初始化数据
      */
+
+
     private void initData() {
         SQLiteDatabase db = dbHelper.getWritableDatabase();
         Integer userId = MainActivity.userId;
@@ -118,27 +138,30 @@ public class UserFragment extends Fragment {
             }
         });
         //从相册中选择头像
-        ivPhoto.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                selectClick();
-            }
-        });
+//        ivPhoto.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                selectClick();
+//            }
+//        });
         //退出登录
-        btnLogout.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(mActivity, LoginActivity.class));
-                mActivity.finish();
-
-            }
-        });
+//        btnLogout.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                startActivity(new Intent(mActivity, MainActivity.class));
+////                startActivity(new Intent(mActivity, LoginActivity.class));
+//                mActivity.finish();
+//
+//
+//            }
+//        });
     }
     /**
      * 选择图片
      */
+
     private void selectClick() {
-        SQLiteDatabase db = dbHelper.getWritableDatabase();
+        //SQLiteDatabase db = dbHelper.getWritableDatabase();
         PictureSelector.create(this)
                 .openGallery(PictureMimeType.ofAll())
                 .imageEngine(GlideEngine.createGlideEngine())
@@ -177,8 +200,8 @@ public class UserFragment extends Fragment {
                                 .load(imagePath)
                                 .apply(headerRO.error(R.drawable.ic_default_man ))
                                 .into(ivPhoto);
-                        db.execSQL("update user set photo = ? where id = ?", new Object[]{imagePath,mUser.getId()});
-                        db.close();
+                        //db.execSQL("update user set photo = ? where id = ?", new Object[]{imagePath,mUser.getId()});
+                        //db.close();
                         Toast.makeText(mActivity,"Update successful",Toast.LENGTH_SHORT).show();
                     }
 
@@ -188,5 +211,7 @@ public class UserFragment extends Fragment {
                     }
                 });
     }
+
+
 
 }
