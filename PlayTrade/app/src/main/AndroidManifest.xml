@@ -29,29 +29,26 @@
 
         <activity android:name=".RegisterActivity" />
         <activity android:name=".LoginActivity" />
-
         <activity android:name=".MainActivity" />
-
-        <!-- This activity ↓ is detail views by Yuxiang-->
+        <activity android:name=".PostActivity" />
+        <!-- This activity ↓ is detail views by Yuxiang -->
         <activity
             android:name=".activity_car_detail"
             android:label="Car Detail Activity"
-            android:parentActivityName=".HomeActivity">
+            android:parentActivityName=".MainActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.example.jetpack.HomeActivity" />
-            </activity>
+                android:value="com.example.jetpack.MainActivity" />
+        </activity>
         <activity
             android:name=".activity_stack_detail"
-            android:label = "Stack Detail Activity"
-            android:parentActivityName=".HomeActivity"
+            android:label="Stack Detail Activity"
+            android:parentActivityName=".MainActivity"
             tools:ignore="Instantiatable">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=
-                    "com.example.jetpack.HomeActivity" />
+                android:value="com.example.jetpack.MainActivity" />
         </activity>
-        <!-- This activity ↑ is detail views by Yuxiang-->
 
     </application>
 

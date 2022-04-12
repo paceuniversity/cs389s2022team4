@@ -9,10 +9,14 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.EditText;
 
 import androidx.fragment.app.Fragment;
 
 import com.example.jetpack.R;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 
 /**
@@ -20,7 +24,17 @@ import com.example.jetpack.R;
  */
 public class MenuFragment extends Fragment {
     private Activity myActivity;//上下文
+    //Private variables of post function by Yuxiang
+    private EditText pName,condition,quantity,brand,disc;
+    private Button button;
+    private FirebaseDatabase db = FirebaseDatabase.getInstance();
+    private DatabaseReference root = db.getReference().child("Users");
 
+    public void onCreate( Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        myActivity.setContentView(R.layout.activity_main);
+
+    }
     @Override
     public void onAttach(Context context) {
         super.onAttach(context);
@@ -29,11 +43,12 @@ public class MenuFragment extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View view=inflater.inflate(R.layout.fragment_menu,container,false);
+        View view=inflater.inflate(R.layout.fragment_post,container,false);
 
         //获取控件
         initView();
         return view;
+
     }
 
     /**

@@ -13,5 +13,13 @@
     <string name="stack_about_detail"><b>Condition:</b>   Used \n<b>Quantity:</b>    1 available \n<b>Brand:</b>         Sassy</string>
     <string name="search">TODO</string>
     <string name="please_enter_a_keyword">Please enter a keyword</string>
+    <string name="product_name">Product Name:</string>
+    <string name="brand">Brand:</string>
+    <string name="submit">Submit</string>
+    <string name="enter_toy_name_including_model">Enter toy name including model</string>
+    <string name="new_like_new_good_fair">new/ like new/good/fair</string>
+    <string name="condition">Condition:</string>
+    <string name="discription">Discription:</string>
+    <string name="quantity">Quantity:</string>
 
 </resources>

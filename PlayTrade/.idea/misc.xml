@@ -3,15 +3,19 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/50670/Local/cs389s2022team4/PlayTrade/app/src/main/res/layout/activity_car_detail.xml" value="0.24947916666666667" />
         <entry key="..\:/Users/50670/Local/cs389s2022team4/PlayTrade/app/src/main/res/layout/activity_detail.xml" value="0.24947916666666667" />
         <entry key="..\:/Users/50670/Local/cs389s2022team4/PlayTrade/app/src/main/res/layout/activity_home.xml" value="0.22826086956521738" />
         <entry key="..\:/Users/50670/Local/cs389s2022team4/PlayTrade/app/src/main/res/layout/activity_login.xml" value="0.12635869565217392" />
         <entry key="..\:/Users/50670/Local/cs389s2022team4/PlayTrade/app/src/main/res/layout/activity_main.xml" value="0.24947916666666667" />
+        <entry key="..\:/Users/50670/Local/cs389s2022team4/PlayTrade/app/src/main/res/layout/activity_post.xml" value="0.176" />
+        <entry key="..\:/Users/50670/Local/cs389s2022team4/PlayTrade/app/src/main/res/layout/activity_post2.xml" value="0.12132725430597771" />
         <entry key="..\:/Users/50670/Local/cs389s2022team4/PlayTrade/app/src/main/res/layout/activity_register.xml" value="0.12635869565217392" />
         <entry key="..\:/Users/50670/Local/cs389s2022team4/PlayTrade/app/src/main/res/layout/activity_splash.xml" value="0.12635869565217392" />
         <entry key="..\:/Users/50670/Local/cs389s2022team4/PlayTrade/app/src/main/res/layout/activity_stack_detail.xml" value="0.22826086956521738" />
-        <entry key="..\:/Users/50670/Local/cs389s2022team4/PlayTrade/app/src/main/res/layout/fragment_home.xml" value="0.12635869565217392" />
-        <entry key="..\:/Users/50670/Local/cs389s2022team4/PlayTrade/app/src/main/res/layout/fragment_menu.xml" value="0.12635869565217392" />
+        <entry key="..\:/Users/50670/Local/cs389s2022team4/PlayTrade/app/src/main/res/layout/fragment_home.xml" value="0.2" />
+        <entry key="..\:/Users/50670/Local/cs389s2022team4/PlayTrade/app/src/main/res/layout/fragment_menu.xml" value="0.264" />
+        <entry key="..\:/Users/50670/Local/cs389s2022team4/PlayTrade/app/src/main/res/layout/fragment_post.xml" value="0.17028985507246377" />
         <entry key="..\:/Users/50670/Local/cs389s2022team4/PlayTrade/app/src/main/res/layout/fragment_user.xml" value="0.12635869565217392" />
         <entry key="..\:/Users/50670/Local/cs389s2022team4/PlayTrade/app/src/main/res/layout/main_activity.xml" value="0.24947916666666667" />
         <entry key="..\:/Users/Administrator/Desktop/Jetpack/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.1" />

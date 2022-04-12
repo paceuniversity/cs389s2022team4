@@ -6,6 +6,8 @@ import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.view.KeyEvent;
 import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.RadioButton;
 import android.widget.TextView;
@@ -19,6 +21,8 @@ import androidx.fragment.app.FragmentTransaction;
 import com.example.jetpack.fragment.HomeFragment;
 import com.example.jetpack.fragment.MenuFragment;
 import com.example.jetpack.fragment.UserFragment;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 
 /**
@@ -49,6 +53,8 @@ public class MainActivity extends AppCompatActivity {
         userId = getIntent().getIntExtra("userId",0);
         initView();
         setViewListener();
+
+        Intent intent = new Intent(this, PostActivity.class);
     }
 
     private void setViewListener() {
@@ -165,14 +171,16 @@ public class MainActivity extends AppCompatActivity {
         }
 
     }
-    // item details method made by Yuxiang
+    // item details method created by Yuxiang
     public void car_detailActivity(View view) {
         Intent intent = new Intent(this, activity_car_detail.class);
         startActivity(intent);
     }
-    //item details method made by Yuxiang
+    //item details method created by Yuxiang
     public void stack_detailActivity(View view) {
         Intent intent = new Intent(this, activity_stack_detail.class);
         startActivity(intent);
     }
+
+
 }
