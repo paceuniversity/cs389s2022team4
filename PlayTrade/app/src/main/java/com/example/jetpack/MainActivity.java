@@ -6,6 +6,8 @@ import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.view.KeyEvent;
 import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.RadioButton;
 import android.widget.TextView;
@@ -19,6 +21,10 @@ import androidx.fragment.app.FragmentTransaction;
 import com.example.jetpack.fragment.HomeFragment;
 import com.example.jetpack.fragment.MenuFragment;
 import com.example.jetpack.fragment.UserFragment;
+import com.example.jetpack.util.DAO_UserPost;
+import com.example.jetpack.util.UserPost;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 
 /**
@@ -31,13 +37,54 @@ public class MainActivity extends AppCompatActivity {
     private RadioButton rbHome;
     private RadioButton rbUpload;
     private RadioButton rbUser;
-    private Fragment[] fragments = new Fragment[]{null, null,null};//存放Fragment
+    final Fragment[] fragments = new Fragment[]{null, null,null};//存放Fragment
     public static Integer userId;
     public static TextView tvSave;
+//Post↓
+    FirebaseDatabase rootNode;
+    DatabaseReference reference;
 
     @Override
     protected void onCreate( Bundle savedInstanceState) {
+        setContentView(R.layout.fragment_menu);
+        final EditText product_name_edit= findViewById(R.id.product_name_edit);
+        final EditText condition_edit= findViewById(R.id.condition_edit);
+        final EditText quantity_edit= findViewById(R.id.quantity_edit);
+        final EditText brand_edit= findViewById(R.id.brand_edit);
+        final EditText description_edit= findViewById(R.id.description_edit);
+        Button button_submit = findViewById(R.id.button_submit);
+        button_submit.setOnClickListener(v -> {
+            rootNode = FirebaseDatabase.getInstance();
+            reference = rootNode.getReference("users");
 
+            String PName = product_name_edit.getText().toString();
+            String condition = condition_edit.getText().toString();
+            String quantity = quantity_edit.getText().toString();
+            String brand = brand_edit.getText().toString();
+            String description = description_edit.getText().toString();
+
+            UserPost up = new UserPost(PName,condition,quantity,brand,description);
+            reference.setValue("Change the user data");
+        });
+//post↑
+        /**
+         DAO_UserPost dao = new DAO_UserPost();
+        button_submit.setOnClickListener(v->
+        {
+            UserPost emp = new UserPost(product_name_edit.getText().toString(),
+                    condition_edit.getText().toString(),
+                    quantity_edit.getText().toString(),
+                    brand_edit.getText().toString(),
+                    description_edit.getText().toString());
+            dao.add(emp).addOnSuccessListener(suc ->
+            {
+                Toast.makeText(this, "Record is inserted", Toast.LENGTH_SHORT).show();
+            }).addOnFailureListener(er ->
+            {
+                Toast.makeText(this,""+er.getMessage(), Toast.LENGTH_SHORT).show();
+            });
+        });
+        */
         super.onCreate(savedInstanceState);
         myActivity = this;
         setContentView(R.layout.activity_main);
@@ -48,6 +95,7 @@ public class MainActivity extends AppCompatActivity {
         rbUser = (RadioButton) findViewById(R.id.rb_main_user);
         tvSave =  findViewById(R.id.save);
         userId = getIntent().getIntExtra("userId",0);
+
         initView();
         setViewListener();
     }
@@ -67,6 +115,7 @@ public class MainActivity extends AppCompatActivity {
                 tvTitle.setText("Upload");
                 switchFragment(1);
                 tvSave.setVisibility(View.GONE);
+
             }
         });
         rbUser.setOnClickListener(new View.OnClickListener() {
