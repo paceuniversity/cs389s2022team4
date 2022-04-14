@@ -40,66 +40,25 @@ public class MainActivity extends AppCompatActivity {
     final Fragment[] fragments = new Fragment[]{null, null,null};//存放Fragment
     public static Integer userId;
     public static TextView tvSave;
-//Post↓
-    FirebaseDatabase rootNode;
-    DatabaseReference reference;
+
 
     @Override
-    protected void onCreate( Bundle savedInstanceState) {
-        setContentView(R.layout.fragment_menu);
-        final EditText product_name_edit= findViewById(R.id.product_name_edit);
-        final EditText condition_edit= findViewById(R.id.condition_edit);
-        final EditText quantity_edit= findViewById(R.id.quantity_edit);
-        final EditText brand_edit= findViewById(R.id.brand_edit);
-        final EditText description_edit= findViewById(R.id.description_edit);
-        Button button_submit = findViewById(R.id.button_submit);
-        button_submit.setOnClickListener(v -> {
-            rootNode = FirebaseDatabase.getInstance();
-            reference = rootNode.getReference("users");
-
-            String PName = product_name_edit.getText().toString();
-            String condition = condition_edit.getText().toString();
-            String quantity = quantity_edit.getText().toString();
-            String brand = brand_edit.getText().toString();
-            String description = description_edit.getText().toString();
-
-            UserPost up = new UserPost(PName,condition,quantity,brand,description);
-            reference.setValue("Change the user data");
-        });
-//post↑
-        /**
-         DAO_UserPost dao = new DAO_UserPost();
-        button_submit.setOnClickListener(v->
-        {
-            UserPost emp = new UserPost(product_name_edit.getText().toString(),
-                    condition_edit.getText().toString(),
-                    quantity_edit.getText().toString(),
-                    brand_edit.getText().toString(),
-                    description_edit.getText().toString());
-            dao.add(emp).addOnSuccessListener(suc ->
-            {
-                Toast.makeText(this, "Record is inserted", Toast.LENGTH_SHORT).show();
-            }).addOnFailureListener(er ->
-            {
-                Toast.makeText(this,""+er.getMessage(), Toast.LENGTH_SHORT).show();
-            });
-        });
-        */
-        super.onCreate(savedInstanceState);
-        myActivity = this;
-        setContentView(R.layout.activity_main);
-        tvTitle =  (TextView) findViewById(R.id.title);
-        llContent =  (LinearLayout) findViewById(R.id.ll_main_content);
-        rbHome = (RadioButton) findViewById(R.id.rb_main_home);
-        rbUpload = (RadioButton) findViewById(R.id.rb_main_upload);
-        rbUser = (RadioButton) findViewById(R.id.rb_main_user);
-        tvSave =  findViewById(R.id.save);
-        userId = getIntent().getIntExtra("userId",0);
+    public void onCreate( Bundle savedInstanceState) {
+            super.onCreate(savedInstanceState);
+            myActivity = this;
+            setContentView(R.layout.activity_main);
+            tvTitle = (TextView) findViewById(R.id.title);
+            llContent = (LinearLayout) findViewById(R.id.ll_main_content);
+            rbHome = (RadioButton) findViewById(R.id.rb_main_home);
+            rbUpload = (RadioButton) findViewById(R.id.rb_main_upload);
+            rbUser = (RadioButton) findViewById(R.id.rb_main_user);
+            tvSave = findViewById(R.id.save);
+            userId = getIntent().getIntExtra("userId", 0);
 
         initView();
         setViewListener();
-    }
 
+    }
     private void setViewListener() {
         rbHome.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -172,6 +131,7 @@ public class MainActivity extends AppCompatActivity {
             //==添加Fragment对象到Fragment事务中
             //参数：显示Fragment的容器的ID，Fragment对象
             transaction.add(R.id.ll_main_content, fragments[fragmentIndex]);
+
         }
 
         //隐藏其他的Fragment
@@ -194,7 +154,7 @@ public class MainActivity extends AppCompatActivity {
 //     * @param event
 //     * @return
 
-    @Override
+    /**@Override
     public boolean onKeyDown(int keyCode, KeyEvent event) {
         if (keyCode == KeyEvent.KEYCODE_BACK) {
             exit();
@@ -214,6 +174,7 @@ public class MainActivity extends AppCompatActivity {
         }
 
     }
+    */
     // item details method made by Yuxiang
     public void car_detailActivity(View view) {
         Intent intent = new Intent(this, activity_car_detail.class);
@@ -222,6 +183,11 @@ public class MainActivity extends AppCompatActivity {
     //item details method made by Yuxiang
     public void stack_detailActivity(View view) {
         Intent intent = new Intent(this, activity_stack_detail.class);
+        startActivity(intent);
+    }
+    //Top right back button on post page
+    public void back(View view) {
+        Intent intent = new Intent(this,MainActivity.class);
         startActivity(intent);
     }
 }

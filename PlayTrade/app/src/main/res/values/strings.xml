@@ -19,5 +19,7 @@
     <string name="brand">Brand:</string>
     <string name="submit">Submit</string>
     <string name="description">Description:</string>
+    <string name="add_picture">Add Picture:</string>
+    <string name="select_image">Select Image</string>
 
 </resources>
