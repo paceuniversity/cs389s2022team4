@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -10,81 +12,254 @@
         android:orientation="vertical">
         <!--标题栏-->
         <RelativeLayout
+            android:id="@+id/titleParent"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:background="@color/colorPrimary">
+
             <TextView
                 android:id="@+id/title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textColor="@color/colorWhite"
                 android:layout_centerInParent="true"
-                android:textSize="16dp"
-                android:text="Home"/>
+                android:text="Home"
+                android:textColor="@color/colorWhite"
+                android:textSize="16dp" />
+
             <TextView
                 android:id="@+id/save"
-                android:visibility="gone"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textColor="@color/colorWhite"
-                android:layout_centerInParent="true"
                 android:layout_alignParentRight="true"
+                android:layout_centerInParent="true"
                 android:layout_marginRight="20dp"
+                android:text="Save"
+                android:textColor="@color/colorWhite"
                 android:textSize="16dp"
-                android:text="Save"/>
+                android:visibility="gone" />
         </RelativeLayout>
+
         <LinearLayout
             android:id="@+id/ll_main_content"
-            android:layout_weight="1"
             android:layout_width="match_parent"
             android:layout_height="0dp"
+            android:layout_weight="1"
             android:orientation="horizontal" />
+
         <RadioGroup
             android:layout_width="match_parent"
             android:layout_height="58dp"
             android:background="@drawable/bg_border_top"
-            android:paddingTop="8dp"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:paddingTop="8dp">
+
             <RadioButton
                 android:id="@+id/rb_main_home"
-                android:layout_weight="1"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:button="@null"
-                android:textAlignment="center"
-                android:gravity="center_horizontal"
-                android:drawableTop="@drawable/selector_main_rb_home"
-                android:textColor="@drawable/selector_main_rb_text"
-                android:textSize="12dp"
+                android:layout_weight="1"
                 android:background="@null"
-                android:text="Home"/>
+                android:button="@null"
+                android:drawableTop="@drawable/selector_main_rb_home"
+                android:gravity="center_horizontal"
+                android:text="Home"
+                android:textAlignment="center"
+                android:textColor="@drawable/selector_main_rb_text"
+                android:textSize="12dp" />
+
             <RadioButton
                 android:id="@+id/rb_main_upload"
-                android:layout_weight="1"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:button="@null"
-                android:textAlignment="center"
-                android:gravity="center_horizontal"
-                android:drawableTop="@drawable/selector_main_rb_upload"
-                android:textColor="@drawable/selector_main_rb_text"
-                android:textSize="12dp"
+                android:layout_weight="1"
                 android:background="@null"
-                android:text="Upload"/>
+                android:button="@null"
+                android:drawableTop="@drawable/selector_main_rb_upload"
+                android:gravity="center_horizontal"
+                android:text="Upload"
+                android:textAlignment="center"
+                android:textColor="@drawable/selector_main_rb_text"
+                android:textSize="12dp" />
+
             <RadioButton
                 android:id="@+id/rb_main_user"
-                android:layout_weight="1"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:button="@null"
-                android:textAlignment="center"
-                android:gravity="center_horizontal"
-                android:drawableTop="@drawable/selector_main_rb_user"
-                android:textColor="@drawable/selector_main_rb_text"
-                android:textSize="12dp"
+                android:layout_weight="1"
                 android:background="@null"
-                android:text="My"/>
+                android:button="@null"
+                android:drawableTop="@drawable/selector_main_rb_user"
+                android:gravity="center_horizontal"
+                android:text="My"
+                android:textAlignment="center"
+                android:textColor="@drawable/selector_main_rb_text"
+                android:textSize="12dp" />
         </RadioGroup>
     </LinearLayout>
 </LinearLayout>
 
+    <!--
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:stretchColumns="1">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
+
+
+        <ImageView
+            android:id="@+id/car"
+            android:layout_width="150dp"
+            android:layout_height="160dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="70dp"
+            android:contentDescription="@string/car"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/car"
+            android:onClick="car_detailActivity"/>
+
+        <TextView
+            android:id="@+id/car_description"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="24dp"
+            android:text="@string/car"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/car"
+            app:layout_constraintTop_toTopOf="@+id/car"
+            android:onClick="car_detailActivity"/>
+
+        <ImageView
+            android:id="@+id/stack"
+            android:layout_width="150dp"
+            android:layout_height="160dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="24dp"
+            android:contentDescription="@string/stack"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/car"
+            app:srcCompat="@drawable/stack"
+            android:onClick="stack_detailActivity"/>
+
+        <TextView
+            android:id="@+id/stack_description"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="24dp"
+            android:text="@string/stack"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/stack"
+            app:layout_constraintTop_toTopOf="@+id/stack"
+            android:onClick="stack_detailActivity"/>
+
+        <ImageView
+            android:id="@+id/dinosaur"
+            android:layout_width="150dp"
+            android:layout_height="160dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="24dp"
+            android:contentDescription="@string/dinosaur"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/stack"
+            app:srcCompat="@drawable/dinosaur" />
+
+        <TextView
+            android:id="@+id/dinosaur_description"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="24dp"
+            android:text="@string/dinosaur"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/dinosaur"
+            app:layout_constraintTop_toTopOf="@+id/dinosaur" />
+
+        <ImageView
+            android:id="@+id/tablet"
+            android:layout_width="150dp"
+            android:layout_height="160dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="24dp"
+            android:contentDescription="@string/tablet"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/dinosaur"
+            app:srcCompat="@drawable/tablet" />
+
+        <TextView
+            android:id="@+id/tablet_description"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="24dp"
+            android:text="@string/tablet"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/tablet"
+            app:layout_constraintTop_toTopOf="@+id/tablet" />
+
+        <ImageView
+            android:id="@+id/fighter"
+            android:layout_width="150sp"
+            android:layout_height="160sp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="24dp"
+            android:contentDescription="@string/fighter"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tablet"
+            app:srcCompat="@drawable/fighter" />
+
+        <TextView
+            android:id="@+id/fighter_description"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="24dp"
+            android:text="@string/fighter"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/fighter"
+            app:layout_constraintTop_toTopOf="@+id/fighter" />
+
+        <ImageView
+            android:id="@+id/bear"
+            android:layout_width="150sp"
+            android:layout_height="160sp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="24dp"
+            android:contentDescription="@string/bear"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/fighter"
+            app:srcCompat="@drawable/bear" />
+
+        <TextView
+            android:id="@+id/bear_description"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="24dp"
+            android:text="@string/bear"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/bear"
+            app:layout_constraintTop_toTopOf="@+id/bear" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+        </TableLayout>
+    </ScrollView>
+    -->

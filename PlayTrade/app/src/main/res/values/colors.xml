@@ -12,4 +12,9 @@
     <color name="colorGray">#cccccc</color><!--灰色-->
     <color name="colorGrayTint">#52CCCCCC</color><!--浅灰色-->
     <color name="colorGrayTints">#2DCCCCCC</color><!--更浅的灰色-->
+
+    <color name="colorThemeRed">#ff0000</color>
+    <color name="colorThemeBlue">#0000ff</color>
+    <color name="colorThemeGreen">#00ff00</color>
+
 </resources>

@@ -16,36 +16,36 @@
         android:background="#FFFFFF"
         android:orientation="vertical"
         >
+
         <EditText
             android:id="@+id/email"
-            android:layout_width="220dp"
+            android:layout_width="251dp"
             android:layout_height="40dp"
             android:layout_gravity="center"
-            android:drawableLeft="@drawable/ic_baseline"
             android:layout_marginTop="50dp"
-            android:textColorHint="#818181"
+            android:drawableLeft="@drawable/ic_baseline"
             android:hint="Email"
-            />
+            android:textColorHint="#818181" />
+
         <EditText
             android:id="@+id/pass"
-            android:layout_width="220dp"
-            android:layout_height="40dp"
+            android:layout_width="251dp"
+            android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:drawableLeft="@drawable/ic_lock"
             android:layout_marginTop="20dp"
-            android:textColorHint="#818181"
-            android:hint="password"
-            />
+            android:drawableLeft="@drawable/ic_lock"
+            android:hint="password (at least 6 num)"
+            android:textColorHint="#818181" />
+
         <EditText
             android:id="@+id/password"
-            android:layout_width="220dp"
-            android:layout_height="40dp"
+            android:layout_width="252dp"
+            android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:drawableLeft="@drawable/ic_lock"
             android:layout_marginTop="20dp"
-            android:textColorHint="#818181"
+            android:drawableLeft="@drawable/ic_lock"
             android:hint="confirm password"
-            />
+            android:textColorHint="#818181" />
         <Button
             android:id="@+id/btn_registered"
             android:layout_marginTop="40dp"
