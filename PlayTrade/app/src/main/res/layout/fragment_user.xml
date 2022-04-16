@@ -1,14 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+
     android:orientation="vertical">
     <!--列表-->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
+
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -18,8 +20,8 @@
                 android:id="@+id/iv_photo"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
-                android:src="@drawable/ic_default_man"
-                android:layout_centerInParent="true" />
+                android:layout_centerInParent="true"
+                android:src="@drawable/ic_default_man" />
 
             <TextView
                 android:id="@+id/tv_nickName"
@@ -31,95 +33,131 @@
                 android:text="Email"
                 android:textSize="14dp" />
         </RelativeLayout>
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/colorWhite"
-            android:paddingTop="10dp"
-            android:paddingBottom="10dp"
-            android:paddingLeft="20dp"
-            android:paddingRight="20dp"
             android:layout_marginTop="10dp"
-            android:orientation="horizontal">
+            android:background="@color/colorWhite"
+            android:orientation="horizontal"
+            android:paddingLeft="20dp"
+            android:paddingTop="10dp"
+            android:paddingRight="20dp"
+            android:paddingBottom="10dp">
+
             <TextView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
+                android:layout_gravity="center_vertical"
                 android:layout_marginLeft="10dp"
+                android:layout_weight="1"
                 android:text="Email"
-                android:textSize="14dp"
                 android:textColor="@color/colorBlack"
-                android:layout_gravity="center_vertical"/>
+                android:textSize="14dp" />
+
             <TextView
-                android:id="@+id/tv_name"
+                android:id="@+id/tv_email"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
+                android:layout_height="wrap_content" />
         </LinearLayout>
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/colorWhite"
-            android:paddingTop="10dp"
-            android:paddingBottom="10dp"
-            android:paddingLeft="20dp"
-            android:paddingRight="20dp"
             android:layout_marginTop="10dp"
-            android:orientation="horizontal">
+            android:background="@color/colorWhite"
+            android:orientation="horizontal"
+            android:paddingLeft="20dp"
+            android:paddingTop="10dp"
+            android:paddingRight="20dp"
+            android:paddingBottom="10dp">
+
             <TextView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
+                android:layout_gravity="center_vertical"
                 android:layout_marginLeft="10dp"
+                android:layout_weight="1"
                 android:text="Phone"
-                android:textSize="14dp"
                 android:textColor="@color/colorBlack"
-                android:layout_gravity="center_vertical"/>
+                android:textSize="14dp" />
+
             <EditText
                 android:id="@+id/et_phone"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="@null"
                 android:gravity="right"
-                android:hint="Please enter your phone"/>
+                android:hint="Please enter your phone" />
         </LinearLayout>
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/colorWhite"
-            android:paddingTop="10dp"
-            android:paddingBottom="10dp"
-            android:paddingLeft="20dp"
-            android:paddingRight="20dp"
             android:layout_marginTop="10dp"
-            android:orientation="horizontal">
+            android:background="@color/colorWhite"
+            android:orientation="horizontal"
+            android:paddingLeft="20dp"
+            android:paddingTop="10dp"
+            android:paddingRight="20dp"
+            android:paddingBottom="10dp">
+
             <TextView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
+                android:layout_gravity="center_vertical"
                 android:layout_marginLeft="10dp"
+                android:layout_weight="1"
                 android:text="Nickname"
-                android:textSize="14dp"
                 android:textColor="@color/colorBlack"
-                android:layout_gravity="center_vertical"/>
+                android:textSize="14dp" />
+
             <EditText
                 android:id="@+id/et_address"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="@null"
                 android:gravity="right"
-                android:inputType="textEmailAddress"
-                android:hint="Please enter your Nickname"/>
+                android:hint="Please enter your Nickname"
+                android:inputType="textEmailAddress" />
         </LinearLayout>
     </LinearLayout>
+
+    <Button
+        android:id="@+id/updatePassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/btn_border_fill"
+        android:text="Reset Password"
+        android:textColor="@color/colorWhite"
+        android:textSize="18dp" />
+
+    <Button
+        android:id="@+id/updateColor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/btn_border_fill"
+        android:text="Change Theme"
+        android:textColor="@color/colorWhite"
+        android:textSize="18dp" />
+
     <Button
         android:id="@+id/logout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Logout"
-        android:background="@drawable/btn_border_fill"
-        android:textSize="18dp"
-        android:textColor="@color/colorWhite"
-        android:layout_marginTop="100dp"
         android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"/>
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/btn_border_fill"
+        android:text="Logout"
+        android:textColor="@color/colorWhite"
+        android:textSize="18dp" />
+
+
 </LinearLayout>
