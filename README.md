@@ -41,8 +41,9 @@
 
 * [Sprint Planning](https://docs.google.com/spreadsheets/d/1JBLR9C0NSWpUQZVGA3eq3OFHKyF6BT9AbrT0RwZVEXI/edit?usp=sharing)
 * [Scrums](https://docs.google.com/document/d/1_FSbuJ9cyu3uHUBbQX0ZFleXxow-SYZ4wsGjxt3yNRI/edit?usp=sharing)
-* Sprint demo - video and apk (or equivalent)
-* Sprint retrospective
+* [Sprint Demo and Retrospective](https://docs.google.com/document/d/1mj4z4vSqQVizG_tpigGQL_fkP7_zAcO5M0yXKJkI12Q/edit?usp=sharing)
+* [Video Demo](https://youtu.be/K-qau_aHYi0)
+* [APK](https://drive.google.com/file/d/1_es4M-77zGH6wRLhwNPXxNJQP8CZxbYX/view?usp=sharing)
 
 **Sprint 3** 
 
@@ -63,5 +64,8 @@
 
 **Tools**<br>
 
-<a href="https://developer.android.com/studio/?gclid=CjwKCAjwiuuRBhBvEiwAFXKaNFRBC7ZjIlrH8syQ1Qc_jEvarHNX4Z1O7AQOQChbFqVLgCdzdGX_gBoCE_oQAvD_BwE&gclsrc=aw.ds"><img width="80" hight="80" alt="Android Studio App Logo" src="https://user-images.githubusercontent.com/79156500/159712493-a67ec624-3585-4bdb-8944-d97b3c155c96.jpeg"></a>&nbsp; &nbsp;<a href="https://github.com"><img width="80" hight="80" alt="GitHub Logo" src="https://user-images.githubusercontent.com/79156500/159713807-06fd77bf-9e89-44f5-b4f2-7a05e18e6910.png"></a>&nbsp; &nbsp;<a href="https://drive.google.com"><img width="80" hight="80" alt="Google Drive Logo" src="https://user-images.githubusercontent.com/79156500/159714202-044b55cd-3341-4963-bb48-39d91cb31be0.png"></a>&nbsp; &nbsp;<a href="canva.com"><img width="80" hight="80" alt="Canva Logo" src="https://user-images.githubusercontent.com/79156500/159715143-bacca580-925e-4140-baac-8e47ecb251cd.png"></a>&nbsp; &nbsp;<a href="https://app.diagrams.net"><img width="80" hight="80" alt="draw.io logo" src="https://user-images.githubusercontent.com/79156500/159715378-960091bc-56a3-40d9-ae8f-6b811fea9eae.png"></a>
+<a href="https://developer.android.com/studio/?gclid=CjwKCAjwiuuRBhBvEiwAFXKaNFRBC7ZjIlrH8syQ1Qc_jEvarHNX4Z1O7AQOQChbFqVLgCdzdGX_gBoCE_oQAvD_BwE&gclsrc=aw.ds"><img width="80" hight="80" alt="Android Studio App Logo" src="https://user-images.githubusercontent.com/79156500/159712493-a67ec624-3585-4bdb-8944-d97b3c155c96.jpeg"></a>&nbsp; &nbsp;<a href="https://github.com"><img width="80" hight="80" alt="GitHub Logo" src="https://user-images.githubusercontent.com/79156500/159713807-06fd77bf-9e89-44f5-b4f2-7a05e18e6910.png"></a>&nbsp; &nbsp;<a href="https://drive.google.com"><img width="80" hight="80" alt="Google Drive Logo" src="https://user-images.githubusercontent.com/79156500/159714202-044b55cd-3341-4963-bb48-39d91cb31be0.png"></a>&nbsp; &nbsp;<a href="canva.com"><img width="80" hight="80" alt="Canva Logo" src="https://user-images.githubusercontent.com/79156500/159715143-bacca580-925e-4140-baac-8e47ecb251cd.png"></a>&nbsp; &nbsp;<a href="https://app.diagrams.net"><img width="80" hight="80" alt="draw.io logo" src="https://user-images.githubusercontent.com/79156500/159715378-960091bc-56a3-40d9-ae8f-6b811fea9eae.png"></a>&nbsp; &nbsp;<a href="https://firebase.google.com"><img width="80" hight="80" alt="firebase logo" src="https://user-images.githubusercontent.com/79156500/163731230-2adc60da-f101-4bc7-8225-80e1357db646.jpg"></a>
+
+
+
 
