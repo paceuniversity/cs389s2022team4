@@ -1,12 +1,13 @@
 package com.example.jetpack.bean;
-
+import android.view.View;
 public class User {
     private Integer id;
     private String name;
+    private String email;
     private String password;
     private String phone;
     private String address;
-    private String photo;//头像
+    private View photo;//头像
 
 
     public Integer getId() {
@@ -23,6 +24,14 @@ public class User {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
     }
 
     public String getPassword() {
@@ -49,20 +58,28 @@ public class User {
         this.address = address;
     }
 
-    public String getPhoto() {
+    public View getPhoto() {
         return photo;
     }
 
-    public void setPhoto(String photo) {
+    public void setPhoto(View photo) {
         this.photo = photo;
     }
 
-    public User(Integer id, String name, String password, String phone, String address, String photo) {
-        this.id = id;
+    public User(String name, String email, String password, String phone, String address, View photo) {
+        this.email = email;
         this.name = name;
         this.password = password;
         this.phone = phone;
         this.address = address;
         this.photo = photo;
+    }
+
+    public User(){ }
+
+    public User(String name, String email, String password){
+        this.name = name;
+        this.email = email;
+        this.password = password;
     }
 }
