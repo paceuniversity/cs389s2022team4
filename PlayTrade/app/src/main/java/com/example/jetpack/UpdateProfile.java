@@ -1,33 +1,26 @@
-package com.example.jetpack.fragment;
-
-import static com.example.jetpack.MainActivity.observer;
+package com.example.jetpack;
 
 import android.app.Activity;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.text.TextUtils;
-import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-import androidx.appcompat.app.AlertDialog;
-import androidx.fragment.app.Fragment;
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.RequestOptions;
-import com.example.jetpack.LoginActivity;
-import com.example.jetpack.R;
-import com.example.jetpack.UpdateProfile;
 import com.example.jetpack.bean.User;
+import com.example.jetpack.fragment.UserFragment;
 import com.example.jetpack.util.GlideEngine;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -42,55 +35,126 @@ import com.luck.picture.lib.config.PictureMimeType;
 import com.luck.picture.lib.entity.LocalMedia;
 import com.luck.picture.lib.listener.OnResultCallbackListener;
 import com.luck.picture.lib.tools.PictureFileUtils;
-import com.luck.picture.lib.tools.SPUtils;
 
 import java.util.List;
-import java.util.Observable;
 
+public class UpdateProfile extends AppCompatActivity {
 
-/**
- * My Profile
- */
-public class UserFragment extends Fragment {
-
-    private FirebaseDatabase database = FirebaseDatabase.getInstance();
-    private DatabaseReference reference;
-
-    private FirebaseFirestore db = FirebaseFirestore.getInstance();
-    private RequestOptions headerRO = new RequestOptions().circleCrop();//圆角变换
-
-    private ImageView ivPhoto;
-    private String imagePath = "";
     Activity context;
     private FirebaseUser user;
     private String userID;
 
-    @Nullable
+    private String imagePath = "";
+    private User mUser = null;
+    private FirebaseDatabase database = FirebaseDatabase.getInstance();
+    private DatabaseReference reference;
+    private FirebaseFirestore db = FirebaseFirestore.getInstance();
+    private RequestOptions headerRO = new RequestOptions().circleCrop();//圆角变换
+
+    private ImageView ivPhoto;
+    private TextView emailTextView, nameTextView;
+    private EditText changePhone, changeAddress;
+    private Button btnSave;
+    private ProgressBar progressbar;
+
+    private FirebaseAuth mAuth;
+
+
     @Override
-    public View onCreateView(LayoutInflater inflater ,@NonNull ViewGroup container , @NonNull Bundle savedInstanceState) {
-        context = getActivity();
-        //data();
-        return inflater.inflate(R.layout.fragment_user ,container,false);
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView((R.layout.activity_update_profile));
+       // context = mActivity;
+        mAuth = FirebaseAuth.getInstance();
+
+        this.ivPhoto = findViewById(R.id.iv_photo);
+        this.changePhone = findViewById(R.id.et_phone);
+        this.changeAddress = findViewById(R.id.et_address);
+        this.btnSave = findViewById(R.id.saveProfile);
+
+        progressbar = findViewById(R.id.progressbar);
+
+        initView();
+        btnSave.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                updateProfile();
+            }
+        });
+
+
+        //dbHelper = new UccOpenHelper(mActivity, "BookStore.db", null, 2);
+        //initData();
+        //initView();
+        //updateProfile();
+        //return view;
     }
 
-    public void onStart(){
+    private void updateProfile() {
+        progressbar.setVisibility(View.VISIBLE);
+
+        String phone, address;
+        phone = changePhone.getText().toString().trim();
+        address = changeAddress.getText().toString().trim();
+
+        if (TextUtils.isEmpty(phone)) {
+            Toast.makeText(getApplicationContext(),
+                    "Please enter your phone number!!",
+                    Toast.LENGTH_LONG)
+                    .show();
+            return;
+        } else if (TextUtils.isEmpty(address)) {
+            Toast.makeText(getApplicationContext(),
+                    "Please enter your address information!!",
+                    Toast.LENGTH_LONG)
+                    .show();
+            return;
+        }
+
+        mUser.setPhone(phone);
+        mUser.setAddress(address);
+    }
+/**
+    @Override
+    public void onStart() {
         super.onStart();
-        data();
-    }
+        // Check if user is signed in (non-null) and update UI accordingly.
+        FirebaseUser user = mAuth.getCurrentUser();
+        String currentEmail = user.getEmail();
 
-    public void data() {
+        documentReference.collection("user").document(currentEmail);
+
+        documentReference.get()
+                .addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
+                    @Override
+                    public void onComplete(@NonNull Task<DocumentSnapshot> task) {
+                        if(task.getResult().exists()){
+                            String nameResult = task.getResult().getString("name");
+                            String emailResult = task.getResult().getString("email");
+
+                            tv_name.setText(nameResult);
+                            tv_email.setText(emailResult);
+                        }else {
+                            Toast.makeText(UpdateProfile.this, "No Profile", Toast.LENGTH_SHORT).show();
+                        }
+
+                    }
+                });
+
+    }*/
+
+
+    private void initView() {
         super.onStart();
         user = FirebaseAuth.getInstance().getCurrentUser();
         reference = FirebaseDatabase.getInstance().getReference("Users");
         userID = user.getUid();
 
-        TextView nameTextView = context.findViewById(R.id.name_onfile);
-        TextView emailTextView = context.findViewById(R.id.email_onfile);
-        TextView phoneTextView = context.findViewById(R.id.phone_onfile);
-        TextView addressTextView = context.findViewById(R.id.address_onfile);
-        Button editButton = context.findViewById(R.id.btn_edit_profile);
-        Button logoutButton = context.findViewById(R.id.btn_logout);
-        Button updateColor = context.findViewById(R.id.btn_changeColor);
+        TextView nameTextView = findViewById(R.id.name_onfile);
+        TextView emailTextView = findViewById(R.id.email_onfile);
+        EditText changePhone = findViewById(R.id.et_phone);
+        EditText changeAddress = findViewById(R.id.et_address);
+        Button saveChange = findViewById(R.id.saveProfile);
 
         reference.child(userID).addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
@@ -105,8 +169,8 @@ public class UserFragment extends Fragment {
 
                     nameTextView.setText(name);
                     emailTextView.setText(email);
-                    phoneTextView.setText(phone);
-                    addressTextView.setText(address);
+                    changePhone.setText(phone);
+                    changeAddress.setText(address);
                 }
             }
 
@@ -116,67 +180,26 @@ public class UserFragment extends Fragment {
             }
         });
 
-        // Edit profile
-        editButton.setOnClickListener(new View.OnClickListener() {
+        //从相册中选择头像
+        ivPhoto.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getActivity(), UpdateProfile.class);
-                startActivity(intent);
+                changePhoto();
             }
         });
-//
-//        // Change Color
-//        updateColor.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                showChooseColor();
-//            }
-//        });
 
-        // 从相册中选择头像
-//        ivPhoto.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                selectClick();
-//            }
-//        });
-
-        // Logout
-        logoutButton.setOnClickListener(new View.OnClickListener() {
+        // Save profile
+        saveChange.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getActivity(), LoginActivity.class);
+                Intent intent = new Intent(UpdateProfile.this, UserFragment.class);
                 startActivity(intent);
             }
         });
     }
 
-    /// 下面是我写的代码，选择颜色 Haonan
-    public void showChooseColor() {
-        int[] colors = {R.color.colorThemeRed, R.color.colorThemeBlue, R.color.colorThemeGreen};
-        int colorIndex = SPUtils.getInstance().getInt("colorIndex");
-        colorIndex = colorIndex == -1 ? 0 : colorIndex;
-        final CharSequence[] charSequence = new CharSequence[]{"Red", "Blue", "Green"};
-        AlertDialog.Builder builder = new AlertDialog.Builder(context);
-        builder.setTitle("Choose color")
-                .setSingleChoiceItems(charSequence, colorIndex, new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-                        observer.update(new Observable(), colors[which]);
-                        SPUtils.getInstance().put("color", colors[which]);
-                        SPUtils.getInstance().put("colorIndex", which);
-                        dialog.dismiss();
-                    }
-                });
-        builder.create().show();
-    }
-
-
-    /**
-     * 选择图片
-     */
-
-    private void selectClick() {
+    private void changePhoto() {
+        //SQLiteDatabase db = dbHelper.getWritableDatabase();
         PictureSelector.create(this)
                 .openGallery(PictureMimeType.ofAll())
                 .imageEngine(GlideEngine.createGlideEngine())
@@ -211,11 +234,16 @@ public class UserFragment extends Fragment {
                             }
                             imagePath = path;
                         }
+//                        if (context == null) {
+//                            return;
+//                        }
                         Glide.with(context)
                                 .load(imagePath)
-                                .apply(headerRO.error(R.drawable.ic_default_man))
+                                .apply(headerRO.error(R.drawable.ic_default_man ))
                                 .into(ivPhoto);
-                        Toast.makeText(context, "Update successful", Toast.LENGTH_SHORT).show();
+                        //db.execSQL("update user set photo = ? where id = ?", new Object[]{imagePath,mUser.getId()});
+                        //db.close();
+                        Toast.makeText(context,"Update successful",Toast.LENGTH_SHORT).show();
                     }
 
                     @Override
@@ -224,6 +252,5 @@ public class UserFragment extends Fragment {
                     }
                 });
     }
-
 
 }

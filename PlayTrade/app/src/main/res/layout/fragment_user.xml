@@ -20,17 +20,36 @@
                 android:layout_height="100dp"
                 android:src="@drawable/ic_default_man"
                 android:layout_centerInParent="true" />
-
-            <TextView
-                android:id="@+id/tv_nickName"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/iv_photo"
-                android:layout_centerHorizontal="true"
-                android:layout_marginTop="30dp"
-                android:text="Email"
-                android:textSize="14dp" />
         </RelativeLayout>
+        <!-- Name -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorWhite"
+            android:paddingTop="30dp"
+            android:paddingBottom="10dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginLeft="10dp"
+                android:text="Name"
+                android:textSize="14dp"
+                android:textColor="@color/colorBlack"
+                android:layout_gravity="center_vertical"/>
+            <TextView
+                android:id="@+id/name_onfile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+        <!-- Email -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -40,6 +59,8 @@
             android:paddingLeft="20dp"
             android:paddingRight="20dp"
             android:layout_marginTop="10dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
             android:orientation="horizontal">
             <TextView
                 android:layout_width="0dp"
@@ -51,10 +72,12 @@
                 android:textColor="@color/colorBlack"
                 android:layout_gravity="center_vertical"/>
             <TextView
-                android:id="@+id/tv_name"
+                android:id="@+id/email_onfile"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"/>
         </LinearLayout>
+
+        <!-- Phone -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -64,6 +87,8 @@
             android:paddingLeft="20dp"
             android:paddingRight="20dp"
             android:layout_marginTop="10dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
             android:orientation="horizontal">
             <TextView
                 android:layout_width="0dp"
@@ -74,14 +99,12 @@
                 android:textSize="14dp"
                 android:textColor="@color/colorBlack"
                 android:layout_gravity="center_vertical"/>
-            <EditText
-                android:id="@+id/et_phone"
+            <TextView
+                android:id="@+id/phone_onfile"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@null"
-                android:gravity="right"
-                android:hint="Please enter your phone"/>
+                android:layout_height="wrap_content"/>
         </LinearLayout>
+        <!-- Address -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -91,35 +114,56 @@
             android:paddingLeft="20dp"
             android:paddingRight="20dp"
             android:layout_marginTop="10dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
             android:orientation="horizontal">
             <TextView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:layout_marginLeft="10dp"
-                android:text="Nickname"
+                android:text="Address"
                 android:textSize="14dp"
                 android:textColor="@color/colorBlack"
                 android:layout_gravity="center_vertical"/>
-            <EditText
-                android:id="@+id/et_address"
+            <TextView
+                android:id="@+id/address_onfile"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@null"
-                android:gravity="right"
-                android:inputType="textEmailAddress"
-                android:hint="Please enter your Nickname"/>
+                android:layout_height="wrap_content"/>
         </LinearLayout>
+
     </LinearLayout>
     <Button
-        android:id="@+id/logout"
+        android:id="@+id/btn_edit_profile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Edit Profile"
+        android:background="@drawable/btn_border_fill"
+        android:textSize="18dp"
+        android:textColor="@color/colorWhite"
+        android:layout_marginTop="50dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"/>
+    <Button
+        android:id="@+id/btn_changeColor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="CHANGE THEME"
+        android:background="@drawable/btn_border_fill"
+        android:textSize="18dp"
+        android:textColor="@color/colorWhite"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"/>
+    <Button
+        android:id="@+id/btn_logout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Logout"
         android:background="@drawable/btn_border_fill"
         android:textSize="18dp"
         android:textColor="@color/colorWhite"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="30dp"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"/>
 </LinearLayout>

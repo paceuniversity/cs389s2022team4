@@ -1,33 +1,26 @@
 package com.example.jetpack;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
-import android.database.Cursor;
-//import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.text.TextUtils;
-import android.util.Log;
+import android.util.Patterns;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ProgressBar;
-import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.jetpack.fragment.HomeFragment;
-import com.google.firebase.FirebaseApp;
-import com.google.firebase.FirebaseOptions;
-import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.AuthResult;
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.AuthResult;
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
-//import com.example.jetpack.util.UccOpenHelper;
 
-import android.util.Patterns;
-import java.io.FileInputStream;
+//import android.database.sqlite.SQLiteDatabase;
+//import com.example.jetpack.util.UccOpenHelper;
 
 public class LoginActivity extends AppCompatActivity {
 
@@ -118,20 +111,20 @@ public class LoginActivity extends AppCompatActivity {
         }
 
         if(password.length() < 6){
-            passwordTextView.setError("Min password length should be 6 characters!");
+            passwordTextView.setError("Minimum password length should be 6 characters!");
             passwordTextView.requestFocus();
             return;
         }
 
         // validations for input email and password
         if (TextUtils.isEmpty(email)) {
-            Toast.makeText(getApplicationContext(), "Please enter email!!",
+            Toast.makeText(getApplicationContext(), "Please enter email!",
                     Toast.LENGTH_LONG).show();
             return;
         }
 
         if (TextUtils.isEmpty(password)) {
-            Toast.makeText(getApplicationContext(), "Please enter password!!",
+            Toast.makeText(getApplicationContext(), "Please enter password!",
                     Toast.LENGTH_LONG).show();
             return;
         }
@@ -143,7 +136,7 @@ public class LoginActivity extends AppCompatActivity {
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
 
-                            Toast.makeText(getApplicationContext(), "Login successful!!", Toast.LENGTH_LONG).show();
+                            Toast.makeText(getApplicationContext(), "Login successful!", Toast.LENGTH_LONG).show();
                             // hide the progress bar
                             //progressbar.setVisibility(View.GONE);
                             // if sign-in is successful, intent to home activity
@@ -151,7 +144,7 @@ public class LoginActivity extends AppCompatActivity {
                             startActivity(intent);
                         } else {
                             // sign-in failed
-                            Toast.makeText(getApplicationContext(), "Login failed!!", Toast.LENGTH_LONG).show();
+                            Toast.makeText(getApplicationContext(), "Login failed!", Toast.LENGTH_LONG).show();
                             // hide the progress bar
                             progressbar.setVisibility(View.GONE);
                         }
