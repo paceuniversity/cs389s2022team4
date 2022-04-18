@@ -20,9 +20,9 @@
         <activity
             android:name=".Signin"
             android:exported="false" />
-        <activity
-            android:name=".User"
-            android:exported="false" />
+<!--        <activity-->
+<!--            android:name=".User"-->
+<!--            android:exported="false" />-->
         <activity
             android:name=".SplashActivity"
             android:exported="true">
@@ -37,6 +37,7 @@
 
         <activity android:name=".RegisterActivity" />
         <activity android:name=".LoginActivity" />
+        <activity android:name=".UpdatePassWordActivity" />
 
 
         <activity android:name=".MainActivity" />
