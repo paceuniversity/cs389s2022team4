@@ -19,6 +19,7 @@ import androidx.fragment.app.FragmentTransaction;
 import com.example.jetpack.fragment.HomeFragment;
 import com.example.jetpack.fragment.MenuFragment;
 import com.example.jetpack.fragment.UserFragment;
+import com.example.jetpack.util.ImageActivity;
 import com.jaeger.library.StatusBarUtil;
 import com.luck.picture.lib.tools.SPUtils;
 
@@ -201,6 +202,10 @@ public class MainActivity extends AppCompatActivity {
     //Top right back button on post page
     public void back(View view) {
         Intent intent = new Intent(this,MainActivity.class);
+        startActivity(intent);
+    }
+    public void openImageActivity(View view) {
+        Intent intent = new Intent (this, ImageActivity.class);
         startActivity(intent);
     }
 }
