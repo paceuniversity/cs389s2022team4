@@ -19,6 +19,7 @@ import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -29,10 +30,10 @@ import com.example.jetpack.MainActivity;
 import com.example.jetpack.R;
 import com.example.jetpack.Upload;
 import com.example.jetpack.databinding.ActivityMainBinding;
-import com.example.jetpack.util.DAO_UserPost;
-import com.example.jetpack.util.UserPost;
+import com.example.jetpack.util.ImageActivity;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.android.gms.tasks.Task;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.storage.FirebaseStorage;
@@ -57,6 +58,8 @@ public class MenuFragment extends Fragment {
     private ImageView mImageView;
     private Uri mImageUri;
 
+    private TextView mTextViewShowUploads;
+
     private StorageReference mStorageRef;
     private DatabaseReference mDatabaseRef;
 
@@ -78,7 +81,6 @@ public class MenuFragment extends Fragment {
         brand_edit = myActivity.findViewById(R.id.brand_edit);
         description_edit = myActivity.findViewById(R.id.description_edit);
         Button button_submit = myActivity.findViewById(R.id.button_submit);
-        DAO_UserPost dao = new DAO_UserPost();
         //upload data when submit button clicked
         button_submit.setOnClickListener(v ->
         {
@@ -110,9 +112,20 @@ public class MenuFragment extends Fragment {
                 openFileChooser();
             }
         });
+        mTextViewShowUploads= myActivity.findViewById(R.id.text_view_show_upload);
+        mTextViewShowUploads. setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openImageActivity();
+            }
+        });
         //获取控件
         initView();
         return view;
+    }
+    private void openImageActivity(){
+        Intent intent = new Intent (myActivity, ImageActivity.class);
+        startActivity(intent);
     }
     private String getFileExtension(Uri uri){
         ContentResolver cR= myActivity.getContentResolver();
@@ -127,13 +140,17 @@ public class MenuFragment extends Fragment {
                     .addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
                         @Override
                         public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
+                            Task<Uri> urlTask = taskSnapshot.getStorage().getDownloadUrl();
+                            while (!urlTask.isSuccessful());
+                            Uri downloadUrl = urlTask.getResult();
+
                             Toast.makeText(myActivity,"Upload successful",Toast.LENGTH_SHORT).show();
                             Upload upload = new Upload(product_name_edit.getText().toString(),
                                     condition_edit.getText().toString(),
                                     quantity_edit.getText().toString(),
                                     brand_edit.getText().toString(),
                                     description_edit.getText().toString(),
-                                    taskSnapshot.getStorage().getDownloadUrl().toString());
+                                    downloadUrl.toString());
                             String uploadId = mDatabaseRef.push().getKey();
                             mDatabaseRef.child(uploadId).setValue(upload);
                         }
@@ -182,7 +199,7 @@ public class MenuFragment extends Fragment {
         && data != null && data.getData() != null){
             mImageUri = data.getData();
             ImageView mImageView = myActivity.findViewById(R.id.image_view);
-            Picasso.with(getContext()).load(mImageUri).into(mImageView);
+            Picasso.get().load(mImageUri).into(mImageView);
 
         }
 
