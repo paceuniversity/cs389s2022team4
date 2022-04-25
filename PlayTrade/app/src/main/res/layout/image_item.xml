@@ -27,7 +27,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/image_view_upload"
                 app:layout_constraintTop_toTopOf="@+id/image_view_upload"
-                android:onClick="detail_toy"/>
+                android:onClick="detail_toy" />
 
             <ImageView
                 android:id="@+id/image_view_upload"

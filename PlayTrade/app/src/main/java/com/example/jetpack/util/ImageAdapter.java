@@ -1,6 +1,8 @@
 package com.example.jetpack.util;
 
 import android.content.Context;
+import android.content.Intent;
+import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,6 +15,7 @@ import com.example.jetpack.R;
 import com.example.jetpack.Upload;
 import com.squareup.picasso.Picasso;
 
+import java.io.Serializable;
 import java.util.List;
 
 public class ImageAdapter extends RecyclerView.Adapter<ImageAdapter.ImageViewHolder> {
@@ -39,6 +42,32 @@ public class ImageAdapter extends RecyclerView.Adapter<ImageAdapter.ImageViewHol
                 .fit()
                 .centerCrop()
                 .into(holder.imageView);
+
+        // onClick method when either image or product name clicked
+        holder.imageView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Passing data from here to detail
+                Intent intent = new Intent(mContext,detail.class);
+                Bundle bundle = new Bundle();
+                bundle.putSerializable("key", uploadCurrent);
+                intent.putExtras(bundle);
+                mContext.startActivity(intent);
+            }
+        });
+        holder.textViewName.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Passing data from here to detail
+                Intent intent = new Intent(mContext,detail.class);
+                Bundle bundle = new Bundle();
+                bundle.putSerializable("key", uploadCurrent);
+                intent.putExtras(bundle);
+                mContext.startActivity(intent);
+            }
+        });
+
+
     }
 
     @Override
@@ -55,6 +84,8 @@ public class ImageAdapter extends RecyclerView.Adapter<ImageAdapter.ImageViewHol
 
             textViewName = itemView.findViewById(R.id.text_view_name);
             imageView = itemView.findViewById(R.id.image_view_upload);
+
+
         }
     }
 

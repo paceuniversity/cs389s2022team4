@@ -58,8 +58,11 @@ public class ImageActivity extends AppCompatActivity {
                 Toast.makeText(ImageActivity.this,databaseError.getMessage(),Toast.LENGTH_SHORT).show();
             }
         });
-    }
 
+        Intent intent = new Intent(getApplicationContext(), detail.class);
+        intent.putExtra("data", mUploads.getClass());
+    }
+    // Button "BROWSE TOYS" clicked method
     public void detail_toy(View view) {
         Intent intent = new Intent (this, detail.class);
         startActivity(intent);
