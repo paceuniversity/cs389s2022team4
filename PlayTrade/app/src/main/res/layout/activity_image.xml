@@ -12,11 +12,11 @@
         android:layout_width="0dp"
         android:layout_height="50dp"
         app:iconifiedByDefault="false"
-        app:defaultQueryHint="please input toys name"
+        app:defaultQueryHint="Search toys name"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:queryHint="please input toys name" />
+        app:queryHint="Search toys name" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recycler_view"
