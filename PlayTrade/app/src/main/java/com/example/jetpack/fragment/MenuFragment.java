@@ -57,6 +57,7 @@ public class MenuFragment extends Fragment {
     private Button mButtonChooseImage;
     private ImageView mImageView;
     private Uri mImageUri;
+    private EditText email;
 
     private TextView mTextViewShowUploads;
 
@@ -81,6 +82,7 @@ public class MenuFragment extends Fragment {
         brand_edit = myActivity.findViewById(R.id.brand_edit);
         description_edit = myActivity.findViewById(R.id.description_edit);
         Button button_submit = myActivity.findViewById(R.id.button_submit);
+        email = myActivity.findViewById(R.id.email_edit);
         //upload data when submit button clicked
         button_submit.setOnClickListener(v ->
         {
@@ -150,7 +152,8 @@ public class MenuFragment extends Fragment {
                                     quantity_edit.getText().toString(),
                                     brand_edit.getText().toString(),
                                     description_edit.getText().toString(),
-                                    downloadUrl.toString());
+                                    downloadUrl.toString(),
+                                    email.getText().toString());
                             String uploadId = mDatabaseRef.push().getKey();
                             mDatabaseRef.child(uploadId).setValue(upload);
                         }

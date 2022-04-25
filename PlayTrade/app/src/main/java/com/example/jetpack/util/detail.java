@@ -26,6 +26,7 @@ public class detail extends AppCompatActivity {
     TextView quantity;
     TextView brand;
     TextView description;
+    TextView email;
 
 
     @Override
@@ -38,6 +39,7 @@ public class detail extends AppCompatActivity {
         quantity = findViewById(R.id.quantity_datail);
         brand = findViewById(R.id.brand_detail);
         description = findViewById(R.id.description);
+        email= findViewById(R.id.email_detail);
         //Passing data from ImageAdapter to detail
         Intent intent = this.getIntent();
         Bundle bundle = intent.getExtras();
@@ -54,6 +56,7 @@ public class detail extends AppCompatActivity {
         quantity.setText(upload.getQuantity());
         brand.setText(upload.getBrand());
         description.setText(upload.getDescription());
+        email.setText(upload.getEmail());
 
     }
 }

@@ -38,6 +38,7 @@
                 android:autofillHints=""
                 android:ems="10"
                 android:gravity="start|top"
+                android:hint="Enter Toy Name With Model"
                 android:inputType="textMultiLine"
                 android:labelFor="@id/product_name"
                 android:minHeight="48dp"
@@ -67,6 +68,7 @@
                 android:layout_marginTop="28dp"
                 android:autofillHints=""
                 android:ems="10"
+                android:hint="Like new/Used"
                 android:inputType="textPersonName"
                 android:labelFor="@id/condition"
                 android:minHeight="48dp"
@@ -139,7 +141,9 @@
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="16dp"
                 android:layout_marginEnd="16dp"
+                android:backgroundTint="#03A9F4"
                 android:text="@string/submit"
+                android:textColor="#FDFDFD"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
@@ -205,7 +209,9 @@
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="16dp"
                 android:layout_marginEnd="16dp"
+                android:backgroundTint="#03A9F4"
                 android:text="@string/select_image"
+                android:textColor="#FBFBFB"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/picture" />
@@ -233,7 +239,7 @@
                 android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/button_submit" />
+                app:layout_constraintTop_toBottomOf="@+id/email_edit" />
 
             <TextView
                 android:id="@+id/text_view_show_upload"
@@ -244,6 +250,38 @@
                 android:text="Show Uploads"
                 app:layout_constraintStart_toEndOf="@+id/picture"
                 app:layout_constraintTop_toBottomOf="@+id/description_edit" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="60dp"
+                android:text="TextView"
+                app:layout_constraintBottom_toBottomOf="parent"
+                tools:layout_editor_absoluteX="175dp" />
+
+            <TextView
+                android:id="@+id/email_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="75dp"
+                android:layout_marginTop="30dp"
+                android:text="Email:"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/button_submit" />
+
+            <EditText
+                android:id="@+id/email_edit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="16dp"
+                android:ems="10"
+                android:inputType="textPersonName"
+                app:layout_constraintStart_toEndOf="@+id/email_title"
+                app:layout_constraintTop_toBottomOf="@+id/button_submit" />
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>
