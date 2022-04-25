@@ -1,6 +1,8 @@
 package com.example.jetpack;
 
-public class Upload {
+import java.io.Serializable;
+
+public class Upload implements Serializable {
     private String PName;
     private String condition;
     private String quantity;

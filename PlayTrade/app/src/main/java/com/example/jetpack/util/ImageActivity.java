@@ -80,9 +80,8 @@ public class ImageActivity extends AppCompatActivity {
                 return true;
             }
         });
+
     }
-
-
     public void detail_toy(View view) {
         Intent intent = new Intent(this, detail.class);
         startActivity(intent);
