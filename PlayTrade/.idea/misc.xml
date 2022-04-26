@@ -51,7 +51,7 @@
         <entry key="app/src/main/res/layout/activity_car_detail.xml" value="0.14209726443768997" />
         <entry key="app/src/main/res/layout/activity_home.xml" value="0.22135416666666666" />
         <entry key="app/src/main/res/layout/activity_image.xml" value="0.29846014492753625" />
-        <entry key="app/src/main/res/layout/activity_login.xml" value="0.22135416666666666" />
+        <entry key="app/src/main/res/layout/activity_login.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.22135416666666666" />
         <entry key="app/src/main/res/layout/activity_register.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_signin.xml" value="0.19429347826086957" />

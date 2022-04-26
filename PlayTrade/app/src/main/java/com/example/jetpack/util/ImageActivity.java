@@ -19,9 +19,7 @@ import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.Query;
 import com.google.firebase.database.ValueEventListener;
-import com.luck.picture.lib.tools.ToastUtils;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -46,7 +44,7 @@ public class ImageActivity extends AppCompatActivity {
         searchView = findViewById(R.id.search);
         mRecyclerView.setHasFixedSize(true);
         mRecyclerView.setLayoutManager(new LinearLayoutManager(this));
-        mUploads = new ArrayList<>();
+        mUploads = new ArrayList();
         mDatabaseRef = FirebaseDatabase.getInstance().getReference("uploads");
         mDatabaseRef.addValueEventListener(new ValueEventListener() {
             @Override
@@ -82,6 +80,7 @@ public class ImageActivity extends AppCompatActivity {
         });
 
     }
+
     public void detail_toy(View view) {
         Intent intent = new Intent(this, detail.class);
         startActivity(intent);
@@ -90,7 +89,7 @@ public class ImageActivity extends AppCompatActivity {
     //下面是我写的代码,匹配字符串
     public boolean foundKeyWord(Upload upload) {
         if (keyword.isEmpty()) return true;
-        return upload.getPName().contains(keyword);
+        return upload.getPName().toUpperCase().contains(keyword.toUpperCase());
     }
 
 
