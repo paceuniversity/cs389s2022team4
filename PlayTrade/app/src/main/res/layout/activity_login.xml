@@ -52,8 +52,7 @@
             android:layout_marginTop="20dp"
             android:background="@drawable/ed_radius"
             android:hint="Email"
-            android:paddingLeft="5dp"
-            android:text="123456@qq.com" />
+            android:paddingLeft="5dp" />
 
         <EditText
             android:id="@+id/pass"
@@ -64,8 +63,7 @@
             android:background="@drawable/ed_radius"
             android:hint="Password"
             android:paddingLeft="5dp"
-            android:password="true"
-            android:text="147147" />
+            android:password="true" />
 
         <Button
             android:id="@+id/but_login"
