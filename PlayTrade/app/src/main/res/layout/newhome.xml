@@ -9,8 +9,8 @@
 
     <ImageView
         android:id="@+id/home_logo"
-        android:layout_width="337dp"
-        android:layout_height="338dp"
+        android:layout_width="340dp"
+        android:layout_height="345dp"
         android:layout_marginTop="40dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -33,6 +33,7 @@
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/home_logo" />
+
     <Button
         android:id="@+id/btn_donate"
         android:layout_width="0dp"
@@ -49,6 +50,7 @@
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/browse_toys_btn" />
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
