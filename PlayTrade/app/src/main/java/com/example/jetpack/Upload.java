@@ -1,16 +1,19 @@
 package com.example.jetpack;
 
-public class Upload {
+import java.io.Serializable;
+
+public class Upload implements Serializable {
     private String PName;
     private String condition;
     private String quantity;
     private String brand;
     private String description;
     private String mImageUrl;
+    private String email;
 
     public Upload(){
     }
-    public Upload(String PName, String condition, String quantity, String brand, String description, String imageUrl){
+    public Upload(String PName, String condition, String quantity, String brand, String description, String imageUrl, String email){
         if(PName.trim().equals("")){
             PName = "No Name";
         }
@@ -20,6 +23,7 @@ public class Upload {
         this.brand = brand;
         this.description = description;
         mImageUrl = imageUrl;
+        this.email = email;
     }
     public String getPName() {
         return PName;
@@ -67,6 +71,13 @@ public class Upload {
     public void setImageUrl(String imageUrl){
         mImageUrl = imageUrl;
     }
+    public String getEmail(){
+        return email;
+    }
+    public void setEmail(){
+        this.email = email;
+    }
+
 }
 
 

@@ -4,11 +4,13 @@ import android.app.Activity;
 import android.content.Intent;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
+import android.view.KeyEvent;
 import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.RadioButton;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
@@ -19,6 +21,7 @@ import androidx.fragment.app.FragmentTransaction;
 import com.example.jetpack.fragment.HomeFragment;
 import com.example.jetpack.fragment.MenuFragment;
 import com.example.jetpack.fragment.UserFragment;
+import com.example.jetpack.util.ImageActivity;
 import com.jaeger.library.StatusBarUtil;
 import com.luck.picture.lib.tools.SPUtils;
 
@@ -27,7 +30,7 @@ import java.util.Observer;
 
 
 /**
- * 主页面
+ * Main Page
  */
 public class MainActivity extends AppCompatActivity {
     private Activity myActivity;
@@ -53,7 +56,7 @@ public class MainActivity extends AppCompatActivity {
             rbHome = (RadioButton) findViewById(R.id.rb_main_home);
             rbUpload = (RadioButton) findViewById(R.id.rb_main_upload);
             rbUser = (RadioButton) findViewById(R.id.rb_main_user);
-            tvSave = findViewById(R.id.save);
+            //tvSave = findViewById(R.id.save);
             userId = getIntent().getIntExtra("userId", 0);
 
         initView();
@@ -77,7 +80,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 tvTitle.setText("Home");
                 switchFragment(0);
-                tvSave.setVisibility(View.GONE);
+                //tvSave.setVisibility(View.GONE);
             }
         });
         rbUpload.setOnClickListener(new View.OnClickListener() {
@@ -85,7 +88,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 tvTitle.setText("Upload");
                 switchFragment(1);
-                tvSave.setVisibility(View.GONE);
+                //tvSave.setVisibility(View.GONE);
             }
         });
         rbUser.setOnClickListener(new View.OnClickListener() {
@@ -93,7 +96,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 tvTitle.setText("My Profile");
                 switchFragment(2);
-                tvSave.setVisibility(View.VISIBLE);
+                //tvSave.setVisibility(View.VISIBLE);
             }
         });
 
@@ -161,13 +164,8 @@ public class MainActivity extends AppCompatActivity {
         transaction.commit();
     }
 
-//     * 双击退出
-//     *
-//     * @param keyCode
-//     * @param event
-//     * @return
 
-    /**@Override
+    @Override
     public boolean onKeyDown(int keyCode, KeyEvent event) {
         if (keyCode == KeyEvent.KEYCODE_BACK) {
             exit();
@@ -187,7 +185,7 @@ public class MainActivity extends AppCompatActivity {
         }
 
     }
-    */
+
     // item details method made by Yuxiang
     public void car_detailActivity(View view) {
         Intent intent = new Intent(this, activity_car_detail.class);
@@ -201,6 +199,10 @@ public class MainActivity extends AppCompatActivity {
     //Top right back button on post page
     public void back(View view) {
         Intent intent = new Intent(this,MainActivity.class);
+        startActivity(intent);
+    }
+    public void openImageActivity(View view) {
+        Intent intent = new Intent (this, ImageActivity.class);
         startActivity(intent);
     }
 }

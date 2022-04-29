@@ -15,14 +15,20 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
+            android:name=".Donate"
+            android:exported="false" />
+        <activity
+            android:name=".util.ImageActivity"
+            android:exported="false" />
+        <activity
+            android:name=".util.detail"
+            android:exported="false" />
+        <activity
             android:name=".UpdateProfile"
             android:exported="false" />
         <activity
-            android:name=".Signin"
+            android:name=".User"
             android:exported="false" />
-<!--        <activity-->
-<!--            android:name=".User"-->
-<!--            android:exported="false" />-->
         <activity
             android:name=".SplashActivity"
             android:exported="true">
@@ -37,13 +43,7 @@
 
         <activity android:name=".RegisterActivity" />
         <activity android:name=".LoginActivity" />
-        <activity android:name=".UpdatePassWordActivity" />
-
-
-        <activity android:name=".MainActivity" />
-
-        <!-- This activity ↓ is detail views by Yuxiang-->
-
+        <activity android:name=".MainActivity" /> <!-- This activity ↓ is detail views by Yuxiang -->
         <activity
             android:name=".activity_car_detail"
             android:label="Car Detail Activity"
@@ -51,7 +51,7 @@
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.jetpack.HomeActivity" />
-            </activity>
+        </activity>
         <activity
             android:name=".activity_stack_detail"
             android:label="Stack Detail Activity"
@@ -61,9 +61,6 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.jetpack.HomeActivity" />
         </activity>
-
-        <!-- This activity ↑ is detail views by Yuxiang-->
-
     </application>
 
 </manifest>
