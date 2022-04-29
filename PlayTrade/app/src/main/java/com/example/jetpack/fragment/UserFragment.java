@@ -92,6 +92,7 @@ public class UserFragment extends Fragment {
         Button logoutButton = context.findViewById(R.id.btn_logout);
         //Button updateColor = context.findViewById(R.id.btn_changeColor);
 
+
         reference.child(userID).addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
@@ -125,7 +126,9 @@ public class UserFragment extends Fragment {
             }
         });
 
+
         // Change Color
+
 //        updateColor.setOnClickListener(new View.OnClickListener() {
 //            @Override
 //            public void onClick(View v) {
