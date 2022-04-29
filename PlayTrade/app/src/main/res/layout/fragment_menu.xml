@@ -194,13 +194,13 @@
                 android:id="@+id/picture"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="24dp"
+                android:layout_marginTop="16dp"
                 android:text="@string/add_picture"
                 android:textSize="16sp"
                 android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/description_edit" />
+                app:layout_constraintTop_toBottomOf="@+id/email_edit" />
 
             <Button
                 android:id="@+id/button_choose_image"
@@ -239,17 +239,17 @@
                 android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/email_edit" />
+                app:layout_constraintTop_toBottomOf="@+id/button_submit" />
 
             <TextView
                 android:id="@+id/text_view_show_upload"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="32dp"
-                android:layout_marginTop="24dp"
+                android:layout_marginTop="2dp"
                 android:text="Show Uploads"
                 app:layout_constraintStart_toEndOf="@+id/picture"
-                app:layout_constraintTop_toBottomOf="@+id/description_edit" />
+                app:layout_constraintTop_toTopOf="@+id/picture" />
 
             <TextView
                 android:id="@+id/textView2"
@@ -264,13 +264,13 @@
                 android:id="@+id/email_title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="75dp"
-                android:layout_marginTop="30dp"
+                android:layout_marginStart="90dp"
+                android:layout_marginTop="48dp"
                 android:text="Email:"
                 android:textSize="16sp"
                 android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/button_submit" />
+                app:layout_constraintTop_toBottomOf="@+id/description" />
 
             <EditText
                 android:id="@+id/email_edit"
@@ -281,7 +281,7 @@
                 android:ems="10"
                 android:inputType="textPersonName"
                 app:layout_constraintStart_toEndOf="@+id/email_title"
-                app:layout_constraintTop_toBottomOf="@+id/button_submit" />
+                app:layout_constraintTop_toBottomOf="@+id/description_edit" />
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>
