@@ -15,6 +15,9 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
+            android:name=".Donate"
+            android:exported="false" />
+        <activity
             android:name=".util.ImageActivity"
             android:exported="false" />
         <activity
@@ -24,11 +27,9 @@
             android:name=".UpdateProfile"
             android:exported="false" />
         <activity
-            android:name=".Signin"
-            android:exported="false" />
-        <activity
             android:name=".User"
             android:exported="false" />
+
         <activity
             android:name=".SplashActivity"
             android:exported="true">

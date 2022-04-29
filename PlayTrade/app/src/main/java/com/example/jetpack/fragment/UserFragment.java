@@ -90,7 +90,8 @@ public class UserFragment extends Fragment {
         TextView addressTextView = context.findViewById(R.id.address_onfile);
         Button editButton = context.findViewById(R.id.btn_edit_profile);
         Button logoutButton = context.findViewById(R.id.btn_logout);
-        Button updateColor = context.findViewById(R.id.btn_changeColor);
+        //Button updateColor = context.findViewById(R.id.btn_changeColor);
+
 
         reference.child(userID).addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
@@ -124,8 +125,10 @@ public class UserFragment extends Fragment {
                 startActivity(intent);
             }
         });
-//
-//        // Change Color
+
+
+        // Change Color
+
 //        updateColor.setOnClickListener(new View.OnClickListener() {
 //            @Override
 //            public void onClick(View v) {
