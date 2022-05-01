@@ -30,7 +30,7 @@ import java.util.Observer;
 
 
 /**
- * Main Page
+ * 主页面
  */
 public class MainActivity extends AppCompatActivity {
     private Activity myActivity;
@@ -56,7 +56,7 @@ public class MainActivity extends AppCompatActivity {
             rbHome = (RadioButton) findViewById(R.id.rb_main_home);
             rbUpload = (RadioButton) findViewById(R.id.rb_main_upload);
             rbUser = (RadioButton) findViewById(R.id.rb_main_user);
-            //tvSave = findViewById(R.id.save);
+            tvSave = findViewById(R.id.save);
             userId = getIntent().getIntExtra("userId", 0);
 
         initView();
@@ -80,7 +80,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 tvTitle.setText("Home");
                 switchFragment(0);
-                //tvSave.setVisibility(View.GONE);
+                tvSave.setVisibility(View.GONE);
             }
         });
         rbUpload.setOnClickListener(new View.OnClickListener() {
@@ -88,7 +88,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 tvTitle.setText("Upload");
                 switchFragment(1);
-                //tvSave.setVisibility(View.GONE);
+                tvSave.setVisibility(View.GONE);
             }
         });
         rbUser.setOnClickListener(new View.OnClickListener() {
@@ -96,7 +96,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 tvTitle.setText("My Profile");
                 switchFragment(2);
-                //tvSave.setVisibility(View.VISIBLE);
+                tvSave.setVisibility(View.VISIBLE);
             }
         });
 
@@ -164,6 +164,11 @@ public class MainActivity extends AppCompatActivity {
         transaction.commit();
     }
 
+//     * 双击退出
+//     *
+//     * @param keyCode
+//     * @param event
+//     * @return
 
     @Override
     public boolean onKeyDown(int keyCode, KeyEvent event) {
