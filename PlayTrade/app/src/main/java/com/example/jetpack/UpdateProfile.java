@@ -82,7 +82,6 @@ public class UpdateProfile extends AppCompatActivity {
             }
         });
 
-
         //dbHelper = new UccOpenHelper(mActivity, "BookStore.db", null, 2);
         //initData();
         //initView();
@@ -96,7 +95,14 @@ public class UpdateProfile extends AppCompatActivity {
             Toast.makeText(this,"Update Successful!", Toast.LENGTH_LONG).show();
         }else Toast.makeText(this, "Update Failed!", Toast.LENGTH_LONG).show();
 
+
+        //dbHelper = new UccOpenHelper(mActivity, "BookStore.db", null, 2);
+        //initData();
+        //initView();
+        //updateProfile();
+        //return view;
     }
+
     private boolean isPhoneChanged() {
         EditText changePhone = findViewById(R.id.et_phone);
         final boolean[] ans = {false};
@@ -144,6 +150,7 @@ public class UpdateProfile extends AppCompatActivity {
         }else{
             return false;
         }
+
     }
 /**
     @Override
