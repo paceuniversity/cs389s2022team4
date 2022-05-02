@@ -56,6 +56,7 @@
 **Final presentation**
 
 **Poster**
+<img width="200" hight="200" src="https://user-images.githubusercontent.com/79156500/159767679-72ef7423-14f7-4efb-a704-755de8fe8e45.png">
 
 **Process description**
 
