@@ -43,18 +43,20 @@
 * [Scrums](https://docs.google.com/document/d/1_FSbuJ9cyu3uHUBbQX0ZFleXxow-SYZ4wsGjxt3yNRI/edit?usp=sharing)
 * [Sprint Demo and Retrospective](https://docs.google.com/document/d/1mj4z4vSqQVizG_tpigGQL_fkP7_zAcO5M0yXKJkI12Q/edit?usp=sharing)
 * [Video Demo](https://youtu.be/K-qau_aHYi0)
-* [APK](https://drive.google.com/file/d/1_es4M-77zGH6wRLhwNPXxNJQP8CZxbYX/view?usp=sharing)
+* [APK](https://drive.google.com/file/d/1I6cKu-DdDJ6kBG7sYGBUXnA4OZC6ZGEm/view?usp=sharing)
 
 **Sprint 3** 
 
-* Sprint Planning
-* Scrums
-* Sprint demo - video and apk (or equivalent)
-* Sprint retrospective
+* [Sprint Planning](https://docs.google.com/spreadsheets/d/1JBLR9C0NSWpUQZVGA3eq3OFHKyF6BT9AbrT0RwZVEXI/edit?usp=sharing)
+* [Scrums](https://docs.google.com/document/d/1c--8hUlpAmx_7Qbl26WEoOBE5Pznr2Gpnpzjcxpio8c/edit?usp=sharing)
+* [Sprint Demo and Retrospective](https://docs.google.com/document/d/1E4SazJaWlK4e9JSOk2pG5Ws0cx5-okeE57JeFhoYN5E/edit?usp=sharing)
+* [Video Demo](https://www.youtube.com/watch?v=ilTAJXecXbE)
+* [APK](https://drive.google.com/file/d/1fr2DnBA8WQcctrgYpL6Hzr6ck5rXNSKS/view?usp=sharing)
 
 **Final presentation**
 
-**Poster**
+**Poster**<br>
+<img width="500" alt="PlayTrade Poster" src="https://github.com/KaiyinCh/AndroidAppTemp/files/8599953/Trade.pdf">
 
 **Process description**
 
