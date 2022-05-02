@@ -6,7 +6,6 @@ import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.text.TextUtils;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -23,19 +22,13 @@ import com.bumptech.glide.request.RequestOptions;
 import com.example.jetpack.bean.User;
 import com.example.jetpack.fragment.UserFragment;
 import com.example.jetpack.util.GlideEngine;
-import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.OnFailureListener;
-import com.google.android.gms.tasks.OnSuccessListener;
-import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
-import com.google.firebase.auth.UserProfileChangeRequest;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
-import com.google.firebase.database.core.Tag;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.luck.picture.lib.PictureSelector;
 import com.luck.picture.lib.config.PictureMimeType;
@@ -45,20 +38,18 @@ import com.luck.picture.lib.tools.PictureFileUtils;
 
 import java.util.List;
 
-
 public class UpdateProfile extends AppCompatActivity {
 
     Activity context;
     private FirebaseUser user;
     private String userID;
+
     private String imagePath = "";
     private User mUser = null;
     private FirebaseDatabase database = FirebaseDatabase.getInstance();
     private DatabaseReference reference;
     private FirebaseFirestore db = FirebaseFirestore.getInstance();
     private RequestOptions headerRO = new RequestOptions().circleCrop();//圆角变换
-
-    String phone, address;
 
     private ImageView ivPhoto;
     private TextView emailTextView, nameTextView;
@@ -73,8 +64,8 @@ public class UpdateProfile extends AppCompatActivity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView((R.layout.activity_update_profile));
+       // context = mActivity;
         mAuth = FirebaseAuth.getInstance();
-        reference = FirebaseDatabase.getInstance().getReference("Users");
 
         this.ivPhoto = findViewById(R.id.iv_photo);
         this.changePhone = findViewById(R.id.et_phone);
@@ -90,25 +81,60 @@ public class UpdateProfile extends AppCompatActivity {
                 updateProfile();
             }
         });
+
+
+        //dbHelper = new UccOpenHelper(mActivity, "BookStore.db", null, 2);
+        //initData();
+        //initView();
+        //updateProfile();
+        //return view;
     }
 
     private void updateProfile() {
+
         if(isPhoneChanged() || isAddressChanged()){
             Toast.makeText(this,"Update Successful!", Toast.LENGTH_LONG).show();
         }else Toast.makeText(this, "Update Failed!", Toast.LENGTH_LONG).show();
 
     }
-
     private boolean isPhoneChanged() {
-        String PHONE = reference.child(userID).child("phone").getKey().toString();
         EditText changePhone = findViewById(R.id.et_phone);
-        if(PHONE.equals(changePhone.getText().toString())){
-            reference.child(userID).child("phone").setValue(changePhone.getEditableText().toString());
-            return true;
-        }else{
-            return false;
-        }
+        final boolean[] ans = {false};
+        reference.child(userID).addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                User userProfile = snapshot.getValue(User.class);
+
+                if (userProfile != null) {
+                    String phone = userProfile.getPhone();
+                    String address = userProfile.getAddress();
+
+                    if (phone.equals(changePhone.getText().toString())) {
+                        reference.child(userID).child("phone").setValue(changePhone.getEditableText().toString());
+                        ans[0] = true;
+                    }
+                }
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
+
+        String PHONE = reference.child(userID).child("phone").getDatabase().toString();
+
+
+//        if(PHONE.equals(changePhone.getText().toString())){
+//            reference.child(userID).child("phone").setValue(changePhone.getEditableText().toString());
+//            return true;
+//        }else{
+//            return false;
+//        }
+
+        return ans[0];
     }
+
     private boolean isAddressChanged() {
         String ADDRESS = reference.child(userID).child("address").getKey().toString();
         EditText changeAddress = findViewById(R.id.et_address);
@@ -119,8 +145,7 @@ public class UpdateProfile extends AppCompatActivity {
             return false;
         }
     }
-
-    /**
+/**
     @Override
     public void onStart() {
         super.onStart();

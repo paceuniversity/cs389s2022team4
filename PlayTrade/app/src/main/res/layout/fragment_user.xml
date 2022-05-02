@@ -27,7 +27,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@color/colorWhite"
-            android:paddingTop="15dp"
+            android:paddingTop="30dp"
             android:paddingBottom="10dp"
             android:paddingLeft="20dp"
             android:paddingRight="20dp"
@@ -134,6 +134,7 @@
         </LinearLayout>
 
     </LinearLayout>
+
     <Button
         android:id="@+id/btn_edit_profile"
         android:layout_width="match_parent"
@@ -145,7 +146,7 @@
         android:layout_marginTop="50dp"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"/>
-<!--
+
     <Button
         android:id="@+id/btn_changeColor"
         android:layout_width="match_parent"
@@ -157,7 +158,6 @@
         android:layout_marginTop="30dp"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"/>
-        -->
 
     <Button
         android:id="@+id/btn_logout"
@@ -170,4 +170,5 @@
         android:layout_marginTop="30dp"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"/>
+
 </LinearLayout>
