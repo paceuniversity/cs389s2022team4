@@ -53,7 +53,7 @@ public class LoginActivity extends AppCompatActivity {
         passwordTextView = (EditText)findViewById(R.id.pass);
         Btn_login = (Button) findViewById(R.id.but_login);
         Btn_register = (Button) findViewById(R.id.but_register);
-        progressbar = (ProgressBar) findViewById(R.id.progressbar);
+   
 
         // Set on Click Listener on Sign-in button
         Btn_login.setOnClickListener(new View.OnClickListener() {
@@ -146,7 +146,7 @@ public class LoginActivity extends AppCompatActivity {
                             // sign-in failed
                             Toast.makeText(getApplicationContext(), "Login failed!", Toast.LENGTH_LONG).show();
                             // hide the progress bar
-                            progressbar.setVisibility(View.GONE);
+
                         }
                     }
                 });

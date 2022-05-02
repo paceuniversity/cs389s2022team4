@@ -125,6 +125,7 @@ public class UserFragment extends Fragment {
             }
         });
 //
+
 //        // Change Color
 //        updateColor.setOnClickListener(new View.OnClickListener() {
 //            @Override
@@ -132,6 +133,7 @@ public class UserFragment extends Fragment {
 //                showChooseColor();
 //            }
 //        });
+
 
         // 从相册中选择头像
 //        ivPhoto.setOnClickListener(new View.OnClickListener() {

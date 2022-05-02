@@ -82,7 +82,6 @@ public class UpdateProfile extends AppCompatActivity {
             }
         });
 
-
         //dbHelper = new UccOpenHelper(mActivity, "BookStore.db", null, 2);
         //initData();
         //initView();
@@ -91,28 +90,67 @@ public class UpdateProfile extends AppCompatActivity {
     }
 
     private void updateProfile() {
-        progressbar.setVisibility(View.VISIBLE);
 
-        String phone, address;
-        phone = changePhone.getText().toString().trim();
-        address = changeAddress.getText().toString().trim();
+        if(isPhoneChanged() || isAddressChanged()){
+            Toast.makeText(this,"Update Successful!", Toast.LENGTH_LONG).show();
+        }else Toast.makeText(this, "Update Failed!", Toast.LENGTH_LONG).show();
 
-        if (TextUtils.isEmpty(phone)) {
-            Toast.makeText(getApplicationContext(),
-                    "Please enter your phone number!!",
-                    Toast.LENGTH_LONG)
-                    .show();
-            return;
-        } else if (TextUtils.isEmpty(address)) {
-            Toast.makeText(getApplicationContext(),
-                    "Please enter your address information!!",
-                    Toast.LENGTH_LONG)
-                    .show();
-            return;
+
+        //dbHelper = new UccOpenHelper(mActivity, "BookStore.db", null, 2);
+        //initData();
+        //initView();
+        //updateProfile();
+        //return view;
+    }
+
+    private boolean isPhoneChanged() {
+        EditText changePhone = findViewById(R.id.et_phone);
+        final boolean[] ans = {false};
+        reference.child(userID).addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                User userProfile = snapshot.getValue(User.class);
+
+                if (userProfile != null) {
+                    String phone = userProfile.getPhone();
+                    String address = userProfile.getAddress();
+
+                    if (phone.equals(changePhone.getText().toString())) {
+                        reference.child(userID).child("phone").setValue(changePhone.getEditableText().toString());
+                        ans[0] = true;
+                    }
+                }
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
+
+        String PHONE = reference.child(userID).child("phone").getDatabase().toString();
+
+
+//        if(PHONE.equals(changePhone.getText().toString())){
+//            reference.child(userID).child("phone").setValue(changePhone.getEditableText().toString());
+//            return true;
+//        }else{
+//            return false;
+//        }
+
+        return ans[0];
+    }
+
+    private boolean isAddressChanged() {
+        String ADDRESS = reference.child(userID).child("address").getKey().toString();
+        EditText changeAddress = findViewById(R.id.et_address);
+        if(ADDRESS.equals(changeAddress.getText().toString())){
+            reference.child(userID).child("address").setValue(changeAddress.getText().toString());
+            return true;
+        }else{
+            return false;
         }
 
-        mUser.setPhone(phone);
-        mUser.setAddress(address);
     }
 /**
     @Override

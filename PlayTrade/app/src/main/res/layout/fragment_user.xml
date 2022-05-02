@@ -133,6 +133,7 @@
         </LinearLayout>
 
     </LinearLayout>
+
     <Button
         android:id="@+id/btn_edit_profile"
         android:layout_width="match_parent"
@@ -144,6 +145,7 @@
         android:layout_marginTop="50dp"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"/>
+
     <Button
         android:id="@+id/btn_changeColor"
         android:layout_width="match_parent"
@@ -155,6 +157,7 @@
         android:layout_marginTop="30dp"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"/>
+
     <Button
         android:id="@+id/btn_logout"
         android:layout_width="match_parent"
@@ -166,4 +169,5 @@
         android:layout_marginTop="30dp"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"/>
+
 </LinearLayout>
