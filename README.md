@@ -58,7 +58,7 @@
 * [Video Demo](https://www.youtube.com/watch?v=c5DiP1p4tww)
 
 **Poster**<br>
-<img width="500" alt="PlayTrade Poster" src="https://user-images.githubusercontent.com/79156500/167277217-ef6aa780-b0a1-43aa-a1e4-4401d6f66e2a.png)">
+<img width="500" alt="PlayTrade Poster" src="https://user-images.githubusercontent.com/79156500/167277217-ef6aa780-b0a1-43aa-a1e4-4401d6f66e2a.png">
 
 **Process description**
 
