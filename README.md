@@ -54,9 +54,11 @@
 * [APK](https://drive.google.com/file/d/1fr2DnBA8WQcctrgYpL6Hzr6ck5rXNSKS/view?usp=sharing)
 
 **Final presentation**
+* [Presentation](https://docs.google.com/presentation/d/15FEFuZYMKsiQUlnTgAGa4-RWukkezg3HpL5C40Jlpis/edit?usp=sharing)
+* [Video Demo](https://www.youtube.com/watch?v=c5DiP1p4tww)
 
 **Poster**<br>
-<img width="500" alt="PlayTrade Poster" src="https://github.com/KaiyinCh/AndroidAppTemp/files/8599953/Trade.pdf">
+<img width="500" alt="PlayTrade Poster" src="https://user-images.githubusercontent.com/79156500/167277217-ef6aa780-b0a1-43aa-a1e4-4401d6f66e2a.png">
 
 **Process description**
 
