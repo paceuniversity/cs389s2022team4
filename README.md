@@ -54,7 +54,7 @@
 * [APK](https://drive.google.com/file/d/1fr2DnBA8WQcctrgYpL6Hzr6ck5rXNSKS/view?usp=sharing)
 
 **Final presentation**
-* [Persentation](https://docs.google.com/presentation/d/15FEFuZYMKsiQUlnTgAGa4-RWukkezg3HpL5C40Jlpis/edit?usp=sharing)
+* [Presentation](https://docs.google.com/presentation/d/15FEFuZYMKsiQUlnTgAGa4-RWukkezg3HpL5C40Jlpis/edit?usp=sharing)
 * [Video Demo](https://www.youtube.com/watch?v=c5DiP1p4tww)
 
 **Poster**<br>
